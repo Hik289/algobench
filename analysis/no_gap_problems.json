@@ -1,0 +1,140 @@
+[
+  {
+    "pid": "CS006",
+    "n_models": 6,
+    "src_pass": 5,
+    "shf_pass": 6
+  },
+  {
+    "pid": "CS008",
+    "n_models": 6,
+    "src_pass": 5,
+    "shf_pass": 6
+  },
+  {
+    "pid": "CS009",
+    "n_models": 6,
+    "src_pass": 5,
+    "shf_pass": 6
+  },
+  {
+    "pid": "CS011",
+    "n_models": 6,
+    "src_pass": 5,
+    "shf_pass": 6
+  },
+  {
+    "pid": "CS012",
+    "n_models": 6,
+    "src_pass": 5,
+    "shf_pass": 6
+  },
+  {
+    "pid": "CS013",
+    "n_models": 5,
+    "src_pass": 5,
+    "shf_pass": 5
+  },
+  {
+    "pid": "CS014",
+    "n_models": 6,
+    "src_pass": 5,
+    "shf_pass": 6
+  },
+  {
+    "pid": "CS015",
+    "n_models": 5,
+    "src_pass": 5,
+    "shf_pass": 5
+  },
+  {
+    "pid": "GT004",
+    "n_models": 5,
+    "src_pass": 5,
+    "shf_pass": 5
+  },
+  {
+    "pid": "GT010",
+    "n_models": 6,
+    "src_pass": 5,
+    "shf_pass": 6
+  },
+  {
+    "pid": "GT011",
+    "n_models": 6,
+    "src_pass": 5,
+    "shf_pass": 5
+  },
+  {
+    "pid": "OP004",
+    "n_models": 6,
+    "src_pass": 6,
+    "shf_pass": 5
+  },
+  {
+    "pid": "OP005",
+    "n_models": 6,
+    "src_pass": 5,
+    "shf_pass": 6
+  },
+  {
+    "pid": "OP006",
+    "n_models": 6,
+    "src_pass": 6,
+    "shf_pass": 6
+  },
+  {
+    "pid": "OP007",
+    "n_models": 5,
+    "src_pass": 5,
+    "shf_pass": 5
+  },
+  {
+    "pid": "OP008",
+    "n_models": 5,
+    "src_pass": 5,
+    "shf_pass": 5
+  },
+  {
+    "pid": "SD004",
+    "n_models": 6,
+    "src_pass": 6,
+    "shf_pass": 5
+  },
+  {
+    "pid": "SD005",
+    "n_models": 6,
+    "src_pass": 6,
+    "shf_pass": 6
+  },
+  {
+    "pid": "SD006",
+    "n_models": 6,
+    "src_pass": 6,
+    "shf_pass": 6
+  },
+  {
+    "pid": "SD007",
+    "n_models": 6,
+    "src_pass": 5,
+    "shf_pass": 5
+  },
+  {
+    "pid": "SD009",
+    "n_models": 6,
+    "src_pass": 6,
+    "shf_pass": 6
+  },
+  {
+    "pid": "SD010",
+    "n_models": 6,
+    "src_pass": 5,
+    "shf_pass": 5
+  },
+  {
+    "pid": "SD011",
+    "n_models": 6,
+    "src_pass": 6,
+    "shf_pass": 6
+  }
+]

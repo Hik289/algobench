@@ -1,0 +1,1556 @@
+{
+  "meta": {
+    "n_candidates": 183,
+    "n_base": 54,
+    "n_synthetic": 129,
+    "pool_breakdown": {
+      "base": 54,
+      "g3_para": 52,
+      "g1_relax": 25,
+      "g4_wrong": 52
+    },
+    "near_para_threshold": 0.7,
+    "model": "gpt-4o-mini",
+    "date": "2026-06-25",
+    "script": "eval_ablation_v2.py",
+    "methodology": "G1: old sol (source_reference_algorithm) passes shifted_examples; G2: new ref sol (target_algorithm) FAILS shifted_examples; G3: Jaccard(source_stmt, shifted_stmt) >= 0.7; G4: estimate_complexity(ref_code) mismatches target_complexity. Pool: 54 base + G3/G1/G4 synthetics generated via GPT-4o-mini."
+  },
+  "table": [
+    {
+      "config": "full",
+      "n": 50,
+      "old_sol_pct": 0.0,
+      "ref_fail_pct": 0.0,
+      "near_para_pct": 0.0,
+      "f_opt_pct": 0.0,
+      "raw_counts": {
+        "old_sol": 0,
+        "ref_fail": 0,
+        "near_para": 0,
+        "f_opt": 0
+      }
+    },
+    {
+      "config": "no_g1",
+      "n": 69,
+      "old_sol_pct": 27.5,
+      "ref_fail_pct": 0.0,
+      "near_para_pct": 0.0,
+      "f_opt_pct": 0.0,
+      "raw_counts": {
+        "old_sol": 19,
+        "ref_fail": 0,
+        "near_para": 0,
+        "f_opt": 0
+      }
+    },
+    {
+      "config": "no_g2",
+      "n": 60,
+      "old_sol_pct": 0.0,
+      "ref_fail_pct": 16.7,
+      "near_para_pct": 0.0,
+      "f_opt_pct": 0.0,
+      "raw_counts": {
+        "old_sol": 0,
+        "ref_fail": 10,
+        "near_para": 0,
+        "f_opt": 0
+      }
+    },
+    {
+      "config": "no_g3",
+      "n": 59,
+      "old_sol_pct": 0.0,
+      "ref_fail_pct": 0.0,
+      "near_para_pct": 15.3,
+      "f_opt_pct": 0.0,
+      "raw_counts": {
+        "old_sol": 0,
+        "ref_fail": 0,
+        "near_para": 9,
+        "f_opt": 0
+      }
+    },
+    {
+      "config": "no_g4",
+      "n": 107,
+      "old_sol_pct": 0.0,
+      "ref_fail_pct": 0.0,
+      "near_para_pct": 0.0,
+      "f_opt_pct": 53.3,
+      "raw_counts": {
+        "old_sol": 0,
+        "ref_fail": 0,
+        "near_para": 0,
+        "f_opt": 57
+      }
+    }
+  ],
+  "per_candidate": [
+    {
+      "pid": "CS001",
+      "ctype": "base",
+      "g1": false,
+      "g2": true,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "CS003",
+      "ctype": "base",
+      "g1": true,
+      "g2": false,
+      "g3": true,
+      "g4": false
+    },
+    {
+      "pid": "CS005",
+      "ctype": "base",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SD001",
+      "ctype": "base",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SD002",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SD003",
+      "ctype": "base",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "OP001",
+      "ctype": "base",
+      "g1": false,
+      "g2": true,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "OP002",
+      "ctype": "base",
+      "g1": false,
+      "g2": true,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "GT001",
+      "ctype": "base",
+      "g1": true,
+      "g2": true,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "GT002",
+      "ctype": "base",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "GT003",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "CS_H1",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": true,
+      "g4": false
+    },
+    {
+      "pid": "CS_H2",
+      "ctype": "base",
+      "g1": true,
+      "g2": false,
+      "g3": true,
+      "g4": false
+    },
+    {
+      "pid": "SD_H1",
+      "ctype": "base",
+      "g1": false,
+      "g2": true,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "OP_H1",
+      "ctype": "base",
+      "g1": true,
+      "g2": false,
+      "g3": true,
+      "g4": false
+    },
+    {
+      "pid": "GT_H1",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "GT_H2",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SD_H2",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "OP_H2",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "CS_H3",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "CS006",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "CS007",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "CS008",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "CS009",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "CS010",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "CS011",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "CS012",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "CS013",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "CS014",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "CS015",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "GT004",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "GT005",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "GT006",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "GT007",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "GT008",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "GT009",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "GT010",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "GT011",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "OP003",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "OP004",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "OP005",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "OP006",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "OP007",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "OP008",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SD004",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SD005",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SD006",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SD007",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SD008",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SD009",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SD010",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SD011",
+      "ctype": "base",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "CS002",
+      "ctype": "base",
+      "g1": true,
+      "g2": false,
+      "g3": true,
+      "g4": false
+    },
+    {
+      "pid": "CS004",
+      "ctype": "base",
+      "g1": true,
+      "g2": false,
+      "g3": true,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_CS001",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": true,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_CS003",
+      "ctype": "g3_para",
+      "g1": true,
+      "g2": false,
+      "g3": true,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_CS005",
+      "ctype": "g3_para",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_SD001",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": true,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_SD002",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": true,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_SD003",
+      "ctype": "g3_para",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_OP001",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": true,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_OP002",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": true,
+      "g3": true,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_GT001",
+      "ctype": "g3_para",
+      "g1": true,
+      "g2": true,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_GT002",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": true,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_GT003",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": true,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_CS_H1",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": true,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_CS_H2",
+      "ctype": "g3_para",
+      "g1": true,
+      "g2": false,
+      "g3": true,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_SD_H1",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": true,
+      "g3": true,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_OP_H1",
+      "ctype": "g3_para",
+      "g1": true,
+      "g2": false,
+      "g3": true,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_GT_H1",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": true,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_GT_H2",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G3_SD_H2",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": true,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_OP_H2",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_CS_H3",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": true,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_CS006",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_CS007",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_CS008",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_CS009",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_CS010",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": true,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_CS011",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_CS012",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_CS013",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G3_CS014",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G3_CS015",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_GT004",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G3_GT005",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_GT006",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G3_GT007",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": true,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_GT008",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G3_GT009",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_GT010",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G3_GT011",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_OP003",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G3_OP004",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": true,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_OP005",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_OP006",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": true,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_OP007",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_OP008",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_SD004",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_SD005",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_SD006",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_SD007",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_SD008",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_SD009",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_SD010",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G3_SD011",
+      "ctype": "g3_para",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G1_CS001",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": true,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G1_CS003",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": false,
+      "g3": true,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G1_CS005",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G1_SD001",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G1_SD002",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G1_SD003",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G1_OP001",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": true,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G1_OP002",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": true,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G1_GT001",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G1_GT002",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G1_GT003",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G1_CS_H1",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": false,
+      "g3": true,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G1_CS_H2",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": false,
+      "g3": true,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G1_SD_H1",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": true,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G1_OP_H1",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G1_GT_H1",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": true,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G1_GT_H2",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G1_SD_H2",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": false,
+      "g3": true,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G1_OP_H2",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G1_CS_H3",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G1_CS013",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G1_CS015",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G1_GT004",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G1_OP007",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G1_OP008",
+      "ctype": "g1_relax",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": false
+    },
+    {
+      "pid": "SYN_G4_CS001",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": true,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_CS003",
+      "ctype": "g4_wrong",
+      "g1": true,
+      "g2": false,
+      "g3": true,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_CS005",
+      "ctype": "g4_wrong",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_SD001",
+      "ctype": "g4_wrong",
+      "g1": true,
+      "g2": true,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_SD002",
+      "ctype": "g4_wrong",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_SD003",
+      "ctype": "g4_wrong",
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_OP001",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": true,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_OP002",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": true,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_GT001",
+      "ctype": "g4_wrong",
+      "g1": true,
+      "g2": true,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_GT002",
+      "ctype": "g4_wrong",
+      "g1": true,
+      "g2": true,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_GT003",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_CS_H1",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": true,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_CS_H2",
+      "ctype": "g4_wrong",
+      "g1": true,
+      "g2": false,
+      "g3": true,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_SD_H1",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": true,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_OP_H1",
+      "ctype": "g4_wrong",
+      "g1": true,
+      "g2": false,
+      "g3": true,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_GT_H1",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_GT_H2",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_SD_H2",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_OP_H2",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_CS_H3",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_CS006",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_CS007",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_CS008",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_CS009",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_CS010",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_CS011",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_CS012",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_CS013",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_CS014",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_CS015",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_GT004",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_GT005",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_GT006",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_GT007",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_GT008",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_GT009",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_GT010",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_GT011",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_OP003",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_OP004",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_OP005",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_OP006",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_OP007",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_OP008",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_SD004",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_SD005",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_SD006",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_SD007",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_SD008",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_SD009",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_SD010",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    },
+    {
+      "pid": "SYN_G4_SD011",
+      "ctype": "g4_wrong",
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": true
+    }
+  ]
+}

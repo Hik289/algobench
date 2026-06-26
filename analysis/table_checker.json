@@ -1,0 +1,1671 @@
+{
+  "meta": {
+    "n_solutions": 264,
+    "categories": {
+      "optimal": 80,
+      "suboptimal": 80,
+      "bruteforce": 52,
+      "llm_nohint": 52
+    },
+    "model": "gpt-4o-mini",
+    "date": "2026-05-28",
+    "methodology": "optimal=generated with target_algorithm hint; suboptimal=generated with source_reference_algorithm hint; bruteforce=O(n^2) nested loops instruction; llm_nohint=no algorithm hint, ground truth by static_tags verifier. 17/52 probs stdin-style, 35/52 func-style (args/expected format). runtime_only: timing at N=500,3000 for stdin-style only (func-style \u2192 UNCERTAIN). static_only: pure AST loop depth. static_tags: loop+keyword patterns. full: static_tags+runtime, disagree \u2192 UNCERTAIN.",
+    "limitations": "52 problems available. 35/52 problems are func-style (args/expected); runtime_only returns UNCERTAIN for these. Ground truth for 'optimal' category relies on LLM following algorithm hints. Some optimal solutions may be incorrect despite the hint."
+  },
+  "table": [
+    {
+      "config": "static_only",
+      "n": 264,
+      "n_optimal_gt": 116,
+      "n_subopt_gt": 148,
+      "f_opt_pct": 30.4,
+      "f_sub_pct": 39.8,
+      "uncertain_pct": 1.1,
+      "agreement_pct": 65.5,
+      "raw_counts": {
+        "f_opt_errors": 45,
+        "f_sub_errors": 45,
+        "uncertain": 3,
+        "agreed": 171,
+        "decided": 261
+      }
+    },
+    {
+      "config": "runtime_only",
+      "n": 264,
+      "n_optimal_gt": 116,
+      "n_subopt_gt": 148,
+      "f_opt_pct": 33.3,
+      "f_sub_pct": 68.2,
+      "uncertain_pct": 64.0,
+      "agreement_pct": 50.5,
+      "raw_counts": {
+        "f_opt_errors": 17,
+        "f_sub_errors": 30,
+        "uncertain": 169,
+        "agreed": 48,
+        "decided": 95
+      }
+    },
+    {
+      "config": "static_tags",
+      "n": 264,
+      "n_optimal_gt": 116,
+      "n_subopt_gt": 148,
+      "f_opt_pct": 39.2,
+      "f_sub_pct": 21.2,
+      "uncertain_pct": 1.1,
+      "agreement_pct": 68.6,
+      "raw_counts": {
+        "f_opt_errors": 58,
+        "f_sub_errors": 24,
+        "uncertain": 3,
+        "agreed": 179,
+        "decided": 261
+      }
+    },
+    {
+      "config": "full",
+      "n": 264,
+      "n_optimal_gt": 116,
+      "n_subopt_gt": 148,
+      "f_opt_pct": 32.6,
+      "f_sub_pct": 41.7,
+      "uncertain_pct": 5.3,
+      "agreement_pct": 63.2,
+      "raw_counts": {
+        "f_opt_errors": 44,
+        "f_sub_errors": 48,
+        "uncertain": 14,
+        "agreed": 158,
+        "decided": 250
+      }
+    }
+  ],
+  "solutions_summary": [
+    {
+      "pid": "CS001",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS003",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS005",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD001",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD002",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD003",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "OP001",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "OP002",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT001",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT002",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT003",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS_H1",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": false
+    },
+    {
+      "pid": "CS_H2",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD_H1",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "OP_H1",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT_H1",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT_H2",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD_H2",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "OP_H2",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS_H3",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS006",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS007",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS008",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS009",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS010",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS011",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS012",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS013",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS014",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS015",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT004",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT005",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT006",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT007",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT008",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT009",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT010",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT011",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "OP003",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "OP004",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "OP005",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "OP006",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "OP007",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "OP008",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD004",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD005",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD006",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD007",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD008",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD009",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD010",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD011",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS001",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS003",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS005",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD001",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD002",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD003",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "OP001",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "OP002",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT001",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT002",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT003",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS_H1",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS_H2",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD_H1",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "OP_H1",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT_H1",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT_H2",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD_H2",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "OP_H2",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS_H3",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS006",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS007",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS008",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS009",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS010",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS011",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS012",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS013",
+      "category": "optimal",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS001",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS003",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS005",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD001",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD002",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD003",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP001",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP002",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT001",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT002",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT003",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS_H1",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS_H2",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD_H1",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP_H1",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT_H1",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT_H2",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD_H2",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP_H2",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS_H3",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS006",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS007",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS008",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS009",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS010",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS011",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS012",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS013",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS014",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS015",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT004",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT005",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT006",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT007",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT008",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT009",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT010",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT011",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP003",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP004",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP005",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP006",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP007",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP008",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD004",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD005",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD006",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD007",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD008",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD009",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD010",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD011",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS001",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS003",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS005",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD001",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD002",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD003",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP001",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP002",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT001",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT002",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT003",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS_H1",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS_H2",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD_H1",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP_H1",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT_H1",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT_H2",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD_H2",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP_H2",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS_H3",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS006",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS007",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS008",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS009",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS010",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS011",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS012",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS013",
+      "category": "suboptimal",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS001",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS003",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS005",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD001",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD002",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD003",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP001",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP002",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT001",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT002",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT003",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS_H1",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS_H2",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD_H1",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP_H1",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT_H1",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT_H2",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD_H2",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP_H2",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS_H3",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS006",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS007",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS008",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS009",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS010",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS011",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS012",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS013",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS014",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS015",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT004",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT005",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT006",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT007",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT008",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT009",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT010",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT011",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP003",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP004",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP005",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP006",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP007",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP008",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD004",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD005",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD006",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD007",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD008",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD009",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD010",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD011",
+      "category": "bruteforce",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS001",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS003",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS005",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD001",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD002",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD003",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "OP001",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "OP002",
+      "category": "llm_nohint",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT001",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT002",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT003",
+      "category": "llm_nohint",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS_H1",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS_H2",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD_H1",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "OP_H1",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT_H1",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT_H2",
+      "category": "llm_nohint",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD_H2",
+      "category": "llm_nohint",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP_H2",
+      "category": "llm_nohint",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS_H3",
+      "category": "llm_nohint",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS006",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS007",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS008",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS009",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS010",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS011",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS012",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "CS013",
+      "category": "llm_nohint",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS014",
+      "category": "llm_nohint",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "CS015",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT004",
+      "category": "llm_nohint",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT005",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT006",
+      "category": "llm_nohint",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT007",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT008",
+      "category": "llm_nohint",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "GT009",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT010",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "GT011",
+      "category": "llm_nohint",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP003",
+      "category": "llm_nohint",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP004",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "OP005",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "OP006",
+      "category": "llm_nohint",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "OP007",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "OP008",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD004",
+      "category": "llm_nohint",
+      "ground_truth": false,
+      "has_code": true
+    },
+    {
+      "pid": "SD005",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD006",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD007",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD008",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD009",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD010",
+      "category": "llm_nohint",
+      "ground_truth": true,
+      "has_code": true
+    },
+    {
+      "pid": "SD011",
+      "category": "llm_nohint",
+      "ground_truth": false,
+      "has_code": true
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "gpt-5.4": {
+    "shifted_opt_t_mean": 0.6799999999999999,
+    "original_opt_t_mean": 0.95,
+    "n_shifted": 20,
+    "n_original": 20,
+    "note": "T20 subset (ORIG-11+HARD-9); DP fix applied; re-run 2026-06-25; ALL-52 orig_opt_t=76.0%, shf_opt_t=54.2%",
+    "orig_opt_t_all52": 76.0,
+    "shf_opt_t_all52": 54.230769230769226
+  },
+  "claude-opus-4-5": {
+    "note": "Recalculated from stored complexity estimates (API key unavailable for re-run)",
+    "shifted_opt_t_mean": 0.29,
+    "original_opt_t_mean": 0.0,
+    "original_opt_t_note": "All 0.0 - no sample_results in prior run, API key invalid (401)",
+    "n_shifted": 20,
+    "n_original": 20
+  }
+}

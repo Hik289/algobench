@@ -1,0 +1,444 @@
+{
+  "method": "N-sweep on 5 CS problems \u00d7 6 models \u00d7 6 levels \u00d7 5 samples, direct prompting. Correctness verified on reference-corrected shifted_examples (CS001 benchmark expected output was wrong: 7\\n7\u21925\\n5; CS_H1 uses flexible pair-sum verifier). TLE checked with generated large inputs (timeout 8s), MemoryError/crash also counted as failure. gpt-5.4 label uses gpt-4.1 (best available OpenAI at eval date 2026-05-28). gemini-2.5-flash: API key expired, all cells returned empty (0% pass@1).",
+  "eval_date": "2026-05-28",
+  "n_problems": 5,
+  "n_samples_per_cell": 5,
+  "problems_used": [
+    "CS001",
+    "CS003",
+    "CS005",
+    "CS_H1",
+    "CS_H2"
+  ],
+  "levels": [
+    2000,
+    5000,
+    10000,
+    50000,
+    100000,
+    200000
+  ],
+  "models": {
+    "gpt-4o-mini": {
+      "backend": "openai",
+      "model_id": "gpt-4o-mini"
+    },
+    "gpt-4o": {
+      "backend": "openai",
+      "model_id": "gpt-4o"
+    },
+    "claude-haiku-4-5": {
+      "backend": "anthropic",
+      "model_id": "claude-haiku-4-5"
+    },
+    "gemini-2.5-flash": {
+      "backend": "gemini",
+      "model_id": "gemini-2.5-flash",
+      "note": "API_KEY_EXPIRED \u2014 all results are 0%"
+    },
+    "gpt-5.4": {
+      "backend": "openai",
+      "model_id": "gpt-4.1",
+      "note": "substituted_by=gpt-4.1_(best_available_OpenAI_2026-05)"
+    },
+    "claude-opus-4-5": {
+      "backend": "anthropic",
+      "model_id": "claude-opus-4-5"
+    }
+  },
+  "per_model_per_level": {
+    "gpt-4o-mini": {
+      "2000": {
+        "p1": 80.0,
+        "p5": 80.0,
+        "opt_t": 80.0,
+        "trap_rate": 14.3,
+        "tle_rate": 4.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "5000": {
+        "p1": 80.0,
+        "p5": 80.0,
+        "opt_t": 72.0,
+        "trap_rate": 0.0,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "10000": {
+        "p1": 40.0,
+        "p5": 80.0,
+        "opt_t": 80.0,
+        "trap_rate": 0.0,
+        "tle_rate": 12.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "50000": {
+        "p1": 60.0,
+        "p5": 80.0,
+        "opt_t": 80.0,
+        "trap_rate": 0.0,
+        "tle_rate": 4.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "100000": {
+        "p1": 60.0,
+        "p5": 80.0,
+        "opt_t": 80.0,
+        "trap_rate": 0.0,
+        "tle_rate": 8.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "200000": {
+        "p1": 80.0,
+        "p5": 80.0,
+        "opt_t": 80.0,
+        "trap_rate": 0.0,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      }
+    },
+    "gpt-4o": {
+      "2000": {
+        "p1": 80.0,
+        "p5": 80.0,
+        "opt_t": 60.0,
+        "trap_rate": 12.5,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "5000": {
+        "p1": 80.0,
+        "p5": 80.0,
+        "opt_t": 60.0,
+        "trap_rate": 0.0,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "10000": {
+        "p1": 80.0,
+        "p5": 80.0,
+        "opt_t": 80.0,
+        "trap_rate": 0.0,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "50000": {
+        "p1": 80.0,
+        "p5": 80.0,
+        "opt_t": 76.0,
+        "trap_rate": 14.3,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "100000": {
+        "p1": 80.0,
+        "p5": 80.0,
+        "opt_t": 76.0,
+        "trap_rate": 14.3,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "200000": {
+        "p1": 80.0,
+        "p5": 80.0,
+        "opt_t": 80.0,
+        "trap_rate": 0.0,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      }
+    },
+    "claude-haiku-4-5": {
+      "2000": {
+        "p1": 60.0,
+        "p5": 100.0,
+        "opt_t": 50.0,
+        "trap_rate": 55.6,
+        "tle_rate": 36.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "5000": {
+        "p1": 40.0,
+        "p5": 100.0,
+        "opt_t": 66.7,
+        "trap_rate": 70.0,
+        "tle_rate": 40.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "10000": {
+        "p1": 80.0,
+        "p5": 100.0,
+        "opt_t": 80.0,
+        "trap_rate": 71.4,
+        "tle_rate": 28.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "50000": {
+        "p1": 100.0,
+        "p5": 100.0,
+        "opt_t": 100.0,
+        "trap_rate": 66.7,
+        "tle_rate": 24.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "100000": {
+        "p1": 80.0,
+        "p5": 100.0,
+        "opt_t": 88.3,
+        "trap_rate": 40.0,
+        "tle_rate": 16.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "200000": {
+        "p1": 40.0,
+        "p5": 80.0,
+        "opt_t": 80.0,
+        "trap_rate": 75.0,
+        "tle_rate": 28.0,
+        "n": 25,
+        "n_problems": 5
+      }
+    },
+    "gemini-2.5-flash": {
+      "2000": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "opt_t": 0.0,
+        "trap_rate": 0.0,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "5000": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "opt_t": 0.0,
+        "trap_rate": 0.0,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "10000": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "opt_t": 0.0,
+        "trap_rate": 0.0,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "50000": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "opt_t": 0.0,
+        "trap_rate": 0.0,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "100000": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "opt_t": 0.0,
+        "trap_rate": 0.0,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "200000": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "opt_t": 0.0,
+        "trap_rate": 0.0,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      }
+    },
+    "gpt-5.4": {
+      "2000": {
+        "p1": 100.0,
+        "p5": 100.0,
+        "opt_t": 84.0,
+        "trap_rate": 0.0,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "5000": {
+        "p1": 100.0,
+        "p5": 100.0,
+        "opt_t": 100.0,
+        "trap_rate": 0.0,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "10000": {
+        "p1": 100.0,
+        "p5": 100.0,
+        "opt_t": 100.0,
+        "trap_rate": 0.0,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "50000": {
+        "p1": 100.0,
+        "p5": 100.0,
+        "opt_t": 100.0,
+        "trap_rate": 0.0,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "100000": {
+        "p1": 100.0,
+        "p5": 100.0,
+        "opt_t": 100.0,
+        "trap_rate": 0.0,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "200000": {
+        "p1": 100.0,
+        "p5": 100.0,
+        "opt_t": 100.0,
+        "trap_rate": 0.0,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      }
+    },
+    "claude-opus-4-5": {
+      "2000": {
+        "p1": 100.0,
+        "p5": 100.0,
+        "opt_t": 60.0,
+        "trap_rate": 0.0,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "5000": {
+        "p1": 100.0,
+        "p5": 100.0,
+        "opt_t": 80.0,
+        "trap_rate": 0.0,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "10000": {
+        "p1": 100.0,
+        "p5": 100.0,
+        "opt_t": 100.0,
+        "trap_rate": 0.0,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "50000": {
+        "p1": 100.0,
+        "p5": 100.0,
+        "opt_t": 100.0,
+        "trap_rate": 0.0,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "100000": {
+        "p1": 100.0,
+        "p5": 100.0,
+        "opt_t": 100.0,
+        "trap_rate": 0.0,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      },
+      "200000": {
+        "p1": 100.0,
+        "p5": 100.0,
+        "opt_t": 100.0,
+        "trap_rate": 0.0,
+        "tle_rate": 0.0,
+        "n": 25,
+        "n_problems": 5
+      }
+    }
+  },
+  "consens_delta_per_model": {
+    "gpt-4o-mini": 0.0,
+    "gpt-4o": 0.0,
+    "claude-haiku-4-5": 20.0,
+    "gemini-2.5-flash": 0.0,
+    "gpt-5.4": 0.0,
+    "claude-opus-4-5": 0.0
+  },
+  "consens_nadir_per_model": {
+    "gpt-4o-mini": {
+      "nadir_p1": 40.0,
+      "nadir_N": 10000,
+      "delta_from_2K_to_nadir": 40.0
+    },
+    "gpt-4o": {
+      "nadir_p1": 80.0,
+      "nadir_N": 2000,
+      "delta_from_2K_to_nadir": 0.0
+    },
+    "claude-haiku-4-5": {
+      "nadir_p1": 40.0,
+      "nadir_N": 5000,
+      "delta_from_2K_to_nadir": 20.0
+    },
+    "gemini-2.5-flash": {
+      "nadir_p1": 0.0,
+      "nadir_N": 2000,
+      "delta_from_2K_to_nadir": 0.0
+    },
+    "gpt-5.4": {
+      "nadir_p1": 100.0,
+      "nadir_N": 2000,
+      "delta_from_2K_to_nadir": 0.0
+    },
+    "claude-opus-4-5": {
+      "nadir_p1": 100.0,
+      "nadir_N": 2000,
+      "delta_from_2K_to_nadir": 0.0
+    }
+  },
+  "sharp_drop_level_per_model": {
+    "gpt-4o-mini": 10000,
+    "gpt-4o": null,
+    "claude-haiku-4-5": 5000,
+    "gemini-2.5-flash": null,
+    "gpt-5.4": null,
+    "claude-opus-4-5": null
+  },
+  "raw_cell_count": 180,
+  "gemini_status": "API_KEY_EXPIRED",
+  "benchmark_quality_notes": [
+    "CS001 shifted_example[0] had wrong expected output (7\\n7 vs correct 5\\n5); fixed via reference solution.",
+    "CS_H1 shifted_example[0] had wrong expected output (3 4 vs correct 2 3); flexible verifier used.",
+    "CS_H1 appears consistently hard (gpt-4o-mini: 0% pass@1 across all N) \u2014 likely a WA issue unrelated to N-scaling.",
+    "Gemini-2.5-flash excluded: both GEMINI_API_KEY values were expired at evaluation time.",
+    "gpt-5.4 substituted by gpt-4.1 (best available OpenAI model as of 2026-05-28)."
+  ]
+}

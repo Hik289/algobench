@@ -1,0 +1,37 @@
+{
+  "method": "Per-tier averages across 6 models (per Launcher human-research final classification)",
+  "tiers": {
+    "O(log n)": {
+      "n": 5,
+      "src_mean": 76.7,
+      "shf_mean": 63.3,
+      "delta_pp": -13.4
+    },
+    "O(n)": {
+      "n": 15,
+      "src_mean": 86.2,
+      "shf_mean": 67.8,
+      "delta_pp": -18.4
+    },
+    "O(n log n)": {
+      "n": 11,
+      "src_mean": 84.8,
+      "shf_mean": 74.2,
+      "delta_pp": -10.6
+    },
+    "O(n^2)": {
+      "n": 2,
+      "src_mean": 83.3,
+      "shf_mean": 58.3,
+      "delta_pp": -25.0
+    },
+    "other": {
+      "n": 19,
+      "src_mean": 79.5,
+      "shf_mean": 67.9,
+      "delta_pp": -11.6
+    }
+  },
+  "total_pids": 52,
+  "source": "Launcher message 2026-06-02 06:15 UTC (human researcher final classification)"
+}

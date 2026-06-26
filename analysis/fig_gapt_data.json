@@ -1,0 +1,30 @@
+{
+  "CS": {
+    "n_samples": 152,
+    "mean_diff": 0.00460526315789473,
+    "std_diff": 0.35553128154572583,
+    "pct_optimal": 84.21052631578947,
+    "note": "mean of (estimated_exponent - target_exponent) over correct samples across 6 models"
+  },
+  "SD": {
+    "n_samples": 111,
+    "mean_diff": 0.25225225225225223,
+    "std_diff": 0.4516327645024816,
+    "pct_optimal": 73.87387387387388,
+    "note": "mean of (estimated_exponent - target_exponent) over correct samples across 6 models"
+  },
+  "OP": {
+    "n_samples": 45,
+    "mean_diff": 0.0,
+    "std_diff": 0.0,
+    "pct_optimal": 100.0,
+    "note": "mean of (estimated_exponent - target_exponent) over correct samples across 6 models"
+  },
+  "GT": {
+    "n_samples": 37,
+    "mean_diff": 0.10810810810810811,
+    "std_diff": 0.20867089769190036,
+    "pct_optimal": 78.37837837837837,
+    "note": "mean of (estimated_exponent - target_exponent) over correct samples across 6 models"
+  }
+}

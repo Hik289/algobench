@@ -1,0 +1,147 @@
+{
+  "gpt-4o-mini": {
+    "easy": {
+      "n": 9,
+      "direct_p1": 44.44444444444444,
+      "rag_p1": 66.66666666666666,
+      "delta_p1": 22.222222222222214,
+      "direct_trap": 0.0,
+      "rag_trap": 0.0,
+      "delta_trap": 0.0
+    },
+    "hard": {
+      "n": 8,
+      "direct_p1": 25.0,
+      "rag_p1": 50.0,
+      "delta_p1": 25.0,
+      "direct_trap": 25.0,
+      "rag_trap": 27.777777777777775,
+      "delta_trap": 2.777777777777775
+    }
+  },
+  "gpt-4o": {
+    "easy": {
+      "n": 9,
+      "direct_p1": 66.66666666666666,
+      "rag_p1": 77.77777777777779,
+      "delta_p1": 11.111111111111128,
+      "direct_trap": 7.777777777777778,
+      "rag_trap": 0.0,
+      "delta_trap": -7.777777777777778
+    },
+    "hard": {
+      "n": 8,
+      "direct_p1": 37.5,
+      "rag_p1": 62.5,
+      "delta_p1": 25.0,
+      "direct_trap": 23.333333333333332,
+      "rag_trap": 33.33333333333333,
+      "delta_trap": 9.999999999999996
+    }
+  },
+  "claude-haiku-4-5": {
+    "easy": {
+      "n": 9,
+      "direct_p1": 77.77777777777779,
+      "rag_p1": 66.66666666666666,
+      "delta_p1": -11.111111111111128,
+      "direct_trap": 5.555555555555555,
+      "rag_trap": 8.148148148148149,
+      "delta_trap": 2.5925925925925934
+    },
+    "hard": {
+      "n": 8,
+      "direct_p1": 62.5,
+      "rag_p1": 62.5,
+      "delta_p1": 0.0,
+      "direct_trap": 25.0,
+      "rag_trap": 12.5,
+      "delta_trap": -12.5
+    }
+  },
+  "gemini-2.5-flash": {
+    "easy": {
+      "n": 9,
+      "direct_p1": 0.0,
+      "rag_p1": 44.44444444444444,
+      "delta_p1": 44.44444444444444,
+      "direct_trap": 8.88888888888889,
+      "rag_trap": 14.444444444444446,
+      "delta_trap": 5.555555555555557
+    },
+    "hard": {
+      "n": 8,
+      "direct_p1": 12.5,
+      "rag_p1": 37.5,
+      "delta_p1": 25.0,
+      "direct_trap": 40.0,
+      "rag_trap": 25.0,
+      "delta_trap": -15.0
+    }
+  },
+  "gpt-5.4": {
+    "easy": {
+      "n": 9,
+      "direct_p1": 88.88888888888889,
+      "rag_p1": 77.77777777777779,
+      "delta_p1": -11.1111111111111,
+      "direct_trap": 11.11111111111111,
+      "rag_trap": 11.11111111111111,
+      "delta_trap": 0.0
+    },
+    "hard": {
+      "n": 8,
+      "direct_p1": 50.0,
+      "rag_p1": 62.5,
+      "delta_p1": 12.5,
+      "direct_trap": 35.0,
+      "rag_trap": 37.5,
+      "delta_trap": 2.5
+    }
+  },
+  "claude-opus-4-5": {
+    "easy": {
+      "n": 9,
+      "direct_p1": 77.77777777777779,
+      "rag_p1": 88.88888888888889,
+      "delta_p1": 11.1111111111111,
+      "direct_trap": 11.11111111111111,
+      "rag_trap": 6.666666666666668,
+      "delta_trap": -4.444444444444443
+    },
+    "hard": {
+      "n": 8,
+      "direct_p1": 62.5,
+      "rag_p1": 62.5,
+      "delta_p1": 0.0,
+      "direct_trap": 27.500000000000004,
+      "rag_trap": 25.0,
+      "delta_trap": -2.5000000000000036
+    }
+  },
+  "_meta": {
+    "median_jaccard": 0.41935483870967744,
+    "easy_pids": [
+      "CS003",
+      "CS005",
+      "CS_H1",
+      "CS_H2",
+      "GT001",
+      "GT002",
+      "GT003",
+      "GT_H1",
+      "OP_H1"
+    ],
+    "hard_pids": [
+      "CS001",
+      "GT_H2",
+      "OP001",
+      "OP002",
+      "SD001",
+      "SD002",
+      "SD003",
+      "SD_H1"
+    ],
+    "note": "easy = Jaccard >= median; hard = Jaccard < median"
+  }
+}

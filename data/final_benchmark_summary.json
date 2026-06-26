@@ -1,0 +1,29 @@
+{
+  "n_seeds": 13,
+  "n_accepted": 11,
+  "n_rejected": 2,
+  "acceptance_rate": 0.8461538461538461,
+  "operator_distribution": {
+    "CS": 3,
+    "SD": 3,
+    "OP": 2,
+    "GT": 3
+  },
+  "accepted_ids": [
+    "CS001",
+    "CS003",
+    "SD001",
+    "SD002",
+    "OP001",
+    "OP002",
+    "GT001",
+    "GT002",
+    "GT003",
+    "CS005",
+    "SD003"
+  ],
+  "rejected_ids": [
+    "CS002",
+    "CS004"
+  ]
+}

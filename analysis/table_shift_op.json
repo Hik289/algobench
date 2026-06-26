@@ -1,0 +1,30 @@
+{
+  "CS": {
+    "jaccard_mean": 0.309094066259546,
+    "len_ratio_mean": 1.9961533515298355,
+    "d_exp_mean": -0.5181818181818182,
+    "most_common_distance": null,
+    "n": 16
+  },
+  "SD": {
+    "jaccard_mean": 0.18735476888525876,
+    "len_ratio_mean": 1.5912190776396702,
+    "d_exp_mean": -0.1,
+    "most_common_distance": null,
+    "n": 13
+  },
+  "OP": {
+    "jaccard_mean": 0.2822022634467474,
+    "len_ratio_mean": 1.4942218840246637,
+    "d_exp_mean": 0.0,
+    "most_common_distance": "Unknown",
+    "n": 10
+  },
+  "GT": {
+    "jaccard_mean": 0.2664818440979649,
+    "len_ratio_mean": 1.7701121266380455,
+    "d_exp_mean": 0.0,
+    "most_common_distance": null,
+    "n": 13
+  }
+}

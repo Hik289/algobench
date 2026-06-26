@@ -1,0 +1,776 @@
+{
+  "meta": {
+    "n_candidates": 54,
+    "near_para_threshold": 0.7,
+    "model": "gpt-4o-mini",
+    "date": "2026-05-28",
+    "methodology": "G1: run LLM-synthesized old solution on shifted_examples; G2: run LLM-generated reference solution on shifted_examples; G3: word-level Jaccard(source_stmt, shifted_stmt) >= 0.7; G4: estimate_complexity(ref_code) mismatches target_complexity",
+    "limitations": "Only 54 candidates available (vs 598 in full pipeline). LLM-generated solutions may not perfectly represent production gates. G1 uses hardcoded templates for CS001/CS002/GT003/CS004, GPT-4o-mini for rest. G4 uses AST-based estimate_complexity (same function as stage4_evaluate.py)."
+  },
+  "table": [
+    {
+      "config": "full",
+      "n": 38,
+      "old_sol_pct": 0.0,
+      "ref_fail_pct": 0.0,
+      "near_para_pct": 0.0,
+      "f_opt_pct": 0.0,
+      "raw_counts": {
+        "old_sol": 0,
+        "ref_fail": 0,
+        "near_para": 0,
+        "f_opt": 0
+      }
+    },
+    {
+      "config": "no_g1",
+      "n": 41,
+      "old_sol_pct": 7.3,
+      "ref_fail_pct": 0.0,
+      "near_para_pct": 0.0,
+      "f_opt_pct": 0.0,
+      "raw_counts": {
+        "old_sol": 3,
+        "ref_fail": 0,
+        "near_para": 0,
+        "f_opt": 0
+      }
+    },
+    {
+      "config": "no_g2",
+      "n": 40,
+      "old_sol_pct": 0.0,
+      "ref_fail_pct": 5.0,
+      "near_para_pct": 0.0,
+      "f_opt_pct": 0.0,
+      "raw_counts": {
+        "old_sol": 0,
+        "ref_fail": 2,
+        "near_para": 0,
+        "f_opt": 0
+      }
+    },
+    {
+      "config": "no_g3",
+      "n": 39,
+      "old_sol_pct": 0.0,
+      "ref_fail_pct": 0.0,
+      "near_para_pct": 2.6,
+      "f_opt_pct": 0.0,
+      "raw_counts": {
+        "old_sol": 0,
+        "ref_fail": 0,
+        "near_para": 1,
+        "f_opt": 0
+      }
+    },
+    {
+      "config": "no_g4",
+      "n": 39,
+      "old_sol_pct": 0.0,
+      "ref_fail_pct": 0.0,
+      "near_para_pct": 0.0,
+      "f_opt_pct": 2.6,
+      "raw_counts": {
+        "old_sol": 0,
+        "ref_fail": 0,
+        "near_para": 0,
+        "f_opt": 1
+      }
+    }
+  ],
+  "per_candidate": [
+    {
+      "pid": "CS001",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": true,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "g1_old_passes": false,
+        "g1_reason": "runtime error: Traceback (most recent call last):\n  File \"/tmp/tmpg_jgckvf.py\", line 12, in <module>\n    solve()\n    ~~~~~^^\n  File \"/tmp/tmpg_jgckvf.py\", line 10, i",
+        "g2_ref_fails": true,
+        "g2_reason": "WA: got '5\\n5', expected '7\\n7'",
+        "g3_jaccard": 0.2703,
+        "g3_near_para": false,
+        "g4_estimated": "O(n log n) [segment tree]",
+        "g4_target": "O((n+Q)log n)",
+        "g4_f_opt_error": false
+      }
+    },
+    {
+      "pid": "CS003",
+      "g1_old_sol_passes": true,
+      "g2_ref_fails": false,
+      "g3_near_para": true,
+      "g4_f_opt_error": true,
+      "details": {
+        "g1_old_passes": true,
+        "g1_reason": "all pass",
+        "g2_ref_fails": false,
+        "g2_reason": "all pass",
+        "g3_jaccard": 0.7917,
+        "g3_near_para": true,
+        "g4_estimated": "O(n log n) [heap/Dijkstra]",
+        "g4_target": "O((n+m)log n)",
+        "g4_f_opt_error": true
+      }
+    },
+    {
+      "pid": "CS005",
+      "g1_old_sol_passes": true,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "g1_old_passes": true,
+        "g1_reason": "all pass",
+        "g2_ref_fails": false,
+        "g2_reason": "all pass",
+        "g3_jaccard": 0.4167,
+        "g3_near_para": false,
+        "g4_estimated": "O(n log n) [binary search]",
+        "g4_target": "O(n log n)",
+        "g4_f_opt_error": false
+      }
+    },
+    {
+      "pid": "SD001",
+      "g1_old_sol_passes": true,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "g1_old_passes": true,
+        "g1_reason": "all pass",
+        "g2_ref_fails": false,
+        "g2_reason": "all pass",
+        "g3_jaccard": 0.375,
+        "g3_near_para": false,
+        "g4_estimated": "O(n)",
+        "g4_target": "O(Q log Q \u03b1(n))",
+        "g4_f_opt_error": false
+      }
+    },
+    {
+      "pid": "SD002",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "g1_old_passes": false,
+        "g1_reason": "WA: got '-5\\n25', expected '20\\n24'",
+        "g2_ref_fails": false,
+        "g2_reason": "all pass",
+        "g3_jaccard": 0.48,
+        "g3_near_para": false,
+        "g4_estimated": "O(n log n) [segment tree]",
+        "g4_target": "O((n+Q)log n)",
+        "g4_f_opt_error": false
+      }
+    },
+    {
+      "pid": "SD003",
+      "g1_old_sol_passes": true,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "g1_old_passes": true,
+        "g1_reason": "all pass",
+        "g2_ref_fails": false,
+        "g2_reason": "all pass",
+        "g3_jaccard": 0.2791,
+        "g3_near_para": false,
+        "g4_estimated": "O(n)",
+        "g4_target": "O(Q \u03b1(n))",
+        "g4_f_opt_error": false
+      }
+    },
+    {
+      "pid": "OP001",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": true,
+      "g3_near_para": false,
+      "g4_f_opt_error": true,
+      "details": {
+        "g1_old_passes": false,
+        "g1_reason": "WA: got '0\\n2', expected '3\\n2'",
+        "g2_ref_fails": true,
+        "g2_reason": "WA: got '', expected '3\\n2'",
+        "g3_jaccard": 0.4595,
+        "g3_near_para": false,
+        "g4_estimated": "O(n log n) [sort]",
+        "g4_target": "O((m+Q)log n)",
+        "g4_f_opt_error": true
+      }
+    },
+    {
+      "pid": "OP002",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": true,
+      "g3_near_para": false,
+      "g4_f_opt_error": true,
+      "details": {
+        "g1_old_passes": false,
+        "g1_reason": "WA: got '6', expected '5'",
+        "g2_ref_fails": true,
+        "g2_reason": "WA: got '7', expected '5'",
+        "g3_jaccard": 0.4762,
+        "g3_near_para": false,
+        "g4_estimated": "O(n^2)",
+        "g4_target": "O(n log n)",
+        "g4_f_opt_error": true
+      }
+    },
+    {
+      "pid": "GT001",
+      "g1_old_sol_passes": true,
+      "g2_ref_fails": true,
+      "g3_near_para": false,
+      "g4_f_opt_error": true,
+      "details": {
+        "g1_old_passes": true,
+        "g1_reason": "all pass",
+        "g2_ref_fails": true,
+        "g2_reason": "WA: got '1', expected '2'",
+        "g3_jaccard": 0.4667,
+        "g3_near_para": false,
+        "g4_estimated": "O(n log n) [binary search]",
+        "g4_target": "O(n\u00b2 K) or O(n K log n)",
+        "g4_f_opt_error": true
+      }
+    },
+    {
+      "pid": "GT002",
+      "g1_old_sol_passes": true,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": true,
+      "details": {
+        "g1_old_passes": true,
+        "g1_reason": "all pass",
+        "g2_ref_fails": false,
+        "g2_reason": "all pass",
+        "g3_jaccard": 0.5417,
+        "g3_near_para": false,
+        "g4_estimated": "O(n log n) [heap/Dijkstra]",
+        "g4_target": "O(n\u00b2 m) or O(n m log n)",
+        "g4_f_opt_error": true
+      }
+    },
+    {
+      "pid": "GT003",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "g1_old_passes": false,
+        "g1_reason": "WA: got '240.00', expected '220'",
+        "g2_ref_fails": false,
+        "g2_reason": "all pass",
+        "g3_jaccard": 0.5429,
+        "g3_near_para": false,
+        "g4_estimated": "O(n^2)",
+        "g4_target": "O(nW)",
+        "g4_f_opt_error": false
+      }
+    },
+    {
+      "pid": "CS_H1",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": true,
+      "g4_f_opt_error": false,
+      "details": {
+        "g1_old_passes": false,
+        "g1_reason": "no_code, metadata: ",
+        "g2_ref_fails": false,
+        "g2_reason": "no_ref_code_generated",
+        "g3_jaccard": 0.7586,
+        "g3_near_para": true,
+        "g4_estimated": "unknown",
+        "g4_target": "O(n)",
+        "g4_f_opt_error": false
+      }
+    },
+    {
+      "pid": "CS_H2",
+      "g1_old_sol_passes": true,
+      "g2_ref_fails": false,
+      "g3_near_para": true,
+      "g4_f_opt_error": false,
+      "details": {
+        "g1_old_passes": true,
+        "g1_reason": "all pass",
+        "g2_ref_fails": false,
+        "g2_reason": "all pass",
+        "g3_jaccard": 0.9,
+        "g3_near_para": true,
+        "g4_estimated": "O(n)",
+        "g4_target": "O(n+m)",
+        "g4_f_opt_error": false
+      }
+    },
+    {
+      "pid": "SD_H1",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": true,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "g1_old_passes": false,
+        "g1_reason": "WA: got '12\\n21', expected '12\\n20'",
+        "g2_ref_fails": true,
+        "g2_reason": "WA: got '12\\n21', expected '12\\n20'",
+        "g3_jaccard": 0.3704,
+        "g3_near_para": false,
+        "g4_estimated": "O(n log n) [BIT/Fenwick]",
+        "g4_target": "O((n+q)log n)",
+        "g4_f_opt_error": false
+      }
+    },
+    {
+      "pid": "OP_H1",
+      "g1_old_sol_passes": true,
+      "g2_ref_fails": false,
+      "g3_near_para": true,
+      "g4_f_opt_error": true,
+      "details": {
+        "g1_old_passes": true,
+        "g1_reason": "all pass",
+        "g2_ref_fails": false,
+        "g2_reason": "all pass",
+        "g3_jaccard": 0.75,
+        "g3_near_para": true,
+        "g4_estimated": "O(n^2)",
+        "g4_target": "O(nm)",
+        "g4_f_opt_error": true
+      }
+    },
+    {
+      "pid": "GT_H1",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "g1_old_passes": false,
+        "g1_reason": "WA: got '80', expected '100'",
+        "g2_ref_fails": false,
+        "g2_reason": "all pass",
+        "g3_jaccard": 0.6667,
+        "g3_near_para": false,
+        "g4_estimated": "O(n log n) [binary search]",
+        "g4_target": "O(n log n)",
+        "g4_f_opt_error": false
+      }
+    },
+    {
+      "pid": "GT_H2",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": true,
+      "details": {
+        "g1_old_passes": false,
+        "g1_reason": "WA: got '3', expected '2'",
+        "g2_ref_fails": false,
+        "g2_reason": "all pass",
+        "g3_jaccard": 0.5417,
+        "g3_near_para": false,
+        "g4_estimated": "O(n^2)",
+        "g4_target": "O(kS)",
+        "g4_f_opt_error": true
+      }
+    },
+    {
+      "pid": "SD_H2",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'input'"
+      }
+    },
+    {
+      "pid": "OP_H2",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'input'"
+      }
+    },
+    {
+      "pid": "CS_H3",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'input'"
+      }
+    },
+    {
+      "pid": "CS006",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "CS007",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "CS008",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "CS009",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "CS010",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "CS011",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "CS012",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "CS013",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'input'"
+      }
+    },
+    {
+      "pid": "CS014",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "CS015",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'input'"
+      }
+    },
+    {
+      "pid": "GT004",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'input'"
+      }
+    },
+    {
+      "pid": "GT005",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "GT006",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "GT007",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "GT008",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "GT009",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "GT010",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "GT011",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "OP003",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "OP004",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "OP005",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "OP006",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "OP007",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'input'"
+      }
+    },
+    {
+      "pid": "OP008",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'input'"
+      }
+    },
+    {
+      "pid": "SD004",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "SD005",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "SD006",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "SD007",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "SD008",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "SD009",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "SD010",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "SD011",
+      "g1_old_sol_passes": false,
+      "g2_ref_fails": false,
+      "g3_near_para": false,
+      "g4_f_opt_error": false,
+      "details": {
+        "error": "'source_reference_algorithm'"
+      }
+    },
+    {
+      "pid": "CS002",
+      "g1_old_sol_passes": true,
+      "g2_ref_fails": false,
+      "g3_near_para": true,
+      "g4_f_opt_error": false,
+      "details": {
+        "g1_old_passes": true,
+        "g1_reason": "all pass",
+        "g2_ref_fails": false,
+        "g2_reason": "all pass",
+        "g3_jaccard": 0.85,
+        "g3_near_para": true,
+        "g4_estimated": "O(n)",
+        "g4_target": "O(n)",
+        "g4_f_opt_error": false
+      }
+    },
+    {
+      "pid": "CS004",
+      "g1_old_sol_passes": true,
+      "g2_ref_fails": false,
+      "g3_near_para": true,
+      "g4_f_opt_error": true,
+      "details": {
+        "g1_old_passes": true,
+        "g1_reason": "all pass",
+        "g2_ref_fails": false,
+        "g2_reason": "all pass",
+        "g3_jaccard": 0.8462,
+        "g3_near_para": true,
+        "g4_estimated": "O(n)",
+        "g4_target": "O(log n)",
+        "g4_f_opt_error": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+[
+  {
+    "src_family": "shortest_path",
+    "tgt_family": "shortest_path",
+    "distance": "Same",
+    "n_problems": 2,
+    "pids": [
+      "CS003",
+      "OP_H1"
+    ],
+    "mean_p1": 58.333333333333336,
+    "mean_opt_t": 41.66666666666667
+  },
+  {
+    "src_family": "dsu",
+    "tgt_family": "dsu",
+    "distance": "Same",
+    "n_problems": 1,
+    "pids": [
+      "SD001"
+    ],
+    "mean_p1": 50.0,
+    "mean_opt_t": 30.0
+  },
+  {
+    "src_family": "mst",
+    "tgt_family": "mst",
+    "distance": "Same",
+    "n_problems": 1,
+    "pids": [
+      "OP001"
+    ],
+    "mean_p1": 50.0,
+    "mean_opt_t": 60.0
+  },
+  {
+    "src_family": "static_range",
+    "tgt_family": "dynamic_range",
+    "distance": "Near",
+    "n_problems": 3,
+    "pids": [
+      "CS001",
+      "SD002",
+      "SD_H1"
+    ],
+    "mean_p1": 27.77777777777778,
+    "mean_opt_t": 22.22222222222222
+  },
+  {
+    "src_family": "greedy_1d",
+    "tgt_family": "dp_1d",
+    "distance": "Near",
+    "n_problems": 3,
+    "pids": [
+      "GT001",
+      "GT_H1",
+      "OP008"
+    ],
+    "mean_p1": 70.58823529411765,
+    "mean_opt_t": 27.058823529411764
+  },
+  {
+    "src_family": "brute_force",
+    "tgt_family": "dp_2d",
+    "distance": "Near",
+    "n_problems": 3,
+    "pids": [
+      "CS_H3",
+      "CS013",
+      "OP006"
+    ],
+    "mean_p1": 100.0,
+    "mean_opt_t": 0.0
+  },
+  {
+    "src_family": "dp_2d",
+    "tgt_family": "dp_lis",
+    "distance": "Near",
+    "n_problems": 2,
+    "pids": [
+      "CS005",
+      "CS012"
+    ],
+    "mean_p1": 91.66666666666666,
+    "mean_opt_t": 62.5
+  },
+  {
+    "src_family": "brute_force",
+    "tgt_family": "dp_1d",
+    "distance": "Near",
+    "n_problems": 2,
+    "pids": [
+      "OP004",
+      "OP005"
+    ],
+    "mean_p1": 91.66666666666666,
+    "mean_opt_t": 100.0
+  },
+  {
+    "src_family": "static_range",
+    "tgt_family": "array_ops",
+    "distance": "Near",
+    "n_problems": 1,
+    "pids": [
+      "CS015"
+    ],
+    "mean_p1": 100.0,
+    "mean_opt_t": 0.0
+  },
+  {
+    "src_family": "greedy_1d",
+    "tgt_family": "dp_2d",
+    "distance": "Far",
+    "n_problems": 3,
+    "pids": [
+      "GT003",
+      "GT_H2",
+      "OP_H2"
+    ],
+    "mean_p1": 44.44444444444444,
+    "mean_opt_t": 0.0
+  },
+  {
+    "src_family": "brute_force",
+    "tgt_family": "string_match",
+    "distance": "Far",
+    "n_problems": 3,
+    "pids": [
+      "CS_H2",
+      "CS011",
+      "CS014"
+    ],
+    "mean_p1": 83.33333333333334,
+    "mean_opt_t": 82.22222222222223
+  },
+  {
+    "src_family": "brute_force",
+    "tgt_family": "dynamic_range",
+    "distance": "Far",
+    "n_problems": 3,
+    "pids": [
+      "SD_H2",
+      "CS008",
+      "SD007"
+    ],
+    "mean_p1": 94.44444444444444,
+    "mean_opt_t": 31.11111111111111
+  },
+  {
+    "src_family": "brute_force",
+    "tgt_family": "matrix_exp",
+    "distance": "Far",
+    "n_problems": 2,
+    "pids": [
+      "CS006",
+      "CS007"
+    ],
+    "mean_p1": 50.0,
+    "mean_opt_t": 26.666666666666668
+  },
+  {
+    "src_family": "graph_traversal",
+    "tgt_family": "dsu",
+    "distance": "Far",
+    "n_problems": 1,
+    "pids": [
+      "SD003"
+    ],
+    "mean_p1": 100.0,
+    "mean_opt_t": 80.0
+  },
+  {
+    "src_family": "greedy_1d",
+    "tgt_family": "dynamic_range",
+    "distance": "Far",
+    "n_problems": 1,
+    "pids": [
+      "OP002"
+    ],
+    "mean_p1": 0.0,
+    "mean_opt_t": 0.0
+  },
+  {
+    "src_family": "greedy_dsu",
+    "tgt_family": "dp_1d",
+    "distance": "Far",
+    "n_problems": 1,
+    "pids": [
+      "GT002"
+    ],
+    "mean_p1": 50.0,
+    "mean_opt_t": 53.333333333333336
+  },
+  {
+    "src_family": "brute_force",
+    "tgt_family": "hash",
+    "distance": "Far",
+    "n_problems": 1,
+    "pids": [
+      "CS_H1"
+    ],
+    "mean_p1": 33.33333333333333,
+    "mean_opt_t": 0.0
+  },
+  {
+    "src_family": "binary_search",
+    "tgt_family": "number_theory",
+    "distance": "Far",
+    "n_problems": 1,
+    "pids": [
+      "CS010"
+    ],
+    "mean_p1": 66.66666666666666,
+    "mean_opt_t": 100.0
+  },
+  {
+    "src_family": "brute_force",
+    "tgt_family": "graph_traversal",
+    "distance": "Far",
+    "n_problems": 1,
+    "pids": [
+      "GT004"
+    ],
+    "mean_p1": 100.0,
+    "mean_opt_t": 0.0
+  },
+  {
+    "src_family": "brute_force",
+    "tgt_family": "flow_matching",
+    "distance": "Far",
+    "n_problems": 1,
+    "pids": [
+      "GT011"
+    ],
+    "mean_p1": 83.33333333333334,
+    "mean_opt_t": 90.0
+  },
+  {
+    "src_family": "graph_traversal",
+    "tgt_family": "greedy_1d",
+    "distance": "Far",
+    "n_problems": 1,
+    "pids": [
+      "OP007"
+    ],
+    "mean_p1": 100.0,
+    "mean_opt_t": 0.0
+  },
+  {
+    "src_family": "brute_force",
+    "tgt_family": "monotonic",
+    "distance": "Far",
+    "n_problems": 1,
+    "pids": [
+      "SD006"
+    ],
+    "mean_p1": 100.0,
+    "mean_opt_t": 0.0
+  },
+  {
+    "src_family": "binary_search",
+    "tgt_family": "heap",
+    "distance": "Far",
+    "n_problems": 1,
+    "pids": [
+      "SD008"
+    ],
+    "mean_p1": 50.0,
+    "mean_opt_t": 50.0
+  }
+]

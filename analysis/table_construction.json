@@ -1,0 +1,45 @@
+{
+  "method": "Quality gate cumulative pass per operator on n=54 candidate pilot pool",
+  "per_op": {
+    "CS": {
+      "cands": 18,
+      "g1_pass": 13,
+      "g2_pass": 12,
+      "g3_pass": 11,
+      "g4_pass": 11,
+      "accepted": 11
+    },
+    "SD": {
+      "cands": 13,
+      "g1_pass": 11,
+      "g2_pass": 10,
+      "g3_pass": 10,
+      "g4_pass": 10,
+      "accepted": 10
+    },
+    "OP": {
+      "cands": 10,
+      "g1_pass": 9,
+      "g2_pass": 7,
+      "g3_pass": 7,
+      "g4_pass": 7,
+      "accepted": 7
+    },
+    "GT": {
+      "cands": 13,
+      "g1_pass": 11,
+      "g2_pass": 11,
+      "g3_pass": 11,
+      "g4_pass": 10,
+      "accepted": 10
+    }
+  },
+  "totals": {
+    "cands": 54,
+    "g1": 44,
+    "g2": 40,
+    "g3": 39,
+    "g4": 38,
+    "acc": 38
+  }
+}
