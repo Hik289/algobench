@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this code or benchmark, please cite the paper."
+title: "AlgoBench: Benchmarking Algorithmic Adaptation in Code Generation"
+authors:
+  - family-names: Song
+    given-names: Xinyuan
+  - family-names: Cai
+    given-names: Zekun
+  - family-names: Zhao
+    given-names: Liang
+date-released: "2026-06-30"
+url: "https://arxiv.org/abs/2607.00062"
+repository-code: "https://github.com/Hik289/algobench"
+license: MIT
+identifiers:
+  - type: doi
+    value: "10.48550/arXiv.2607.00062"
