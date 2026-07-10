@@ -8,15 +8,8 @@ Xinyuan Song &nbsp;&middot;&nbsp; Zekun Cai &nbsp;&middot;&nbsp; Liang Zhao
 
 <p>
   <a href="https://arxiv.org/abs/2607.00062"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2607.00062-b31b1b.svg"></a>
-  <a href="https://arxiv.org/pdf/2607.00062"><img alt="PDF" src="https://img.shields.io/badge/PDF-arXiv-b31b1b.svg"></a>
-  <a href="https://doi.org/10.48550/arXiv.2607.00062"><img alt="DOI" src="https://img.shields.io/badge/DOI-10.48550%2FarXiv.2607.00062-blue.svg"></a>
-  <a href="https://github.com/Hik289/algobench"><img alt="Code" src="https://img.shields.io/badge/Code-GitHub-black.svg"></a>
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
   <a href="requirements.txt"><img alt="Python" src="https://img.shields.io/badge/Python-3.9%2B-blue.svg"></a>
-</p>
-
-<p>
-  <a href="data/final_benchmark.jsonl"><img alt="Benchmark" src="https://img.shields.io/badge/Benchmark-52_shifted_tasks-00a88f.svg"></a>
 </p>
 
 </div>
