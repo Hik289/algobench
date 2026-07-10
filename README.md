@@ -17,8 +17,6 @@ Xinyuan Song &nbsp;&middot;&nbsp; Zekun Cai &nbsp;&middot;&nbsp; Liang Zhao
 
 <p>
   <a href="data/final_benchmark.jsonl"><img alt="Benchmark" src="https://img.shields.io/badge/Benchmark-52_shifted_tasks-00a88f.svg"></a>
-  <a href="#metrics-beyond-correctness"><img alt="Metrics" src="https://img.shields.io/badge/Metrics-OPTT%20%7C%20OPTS%20%7C%20TRAPRATE%20%7C%20GAPT%20%7C%20CONSENS-6941c6.svg"></a>
-  <a href="#transformation-operators"><img alt="Operators" src="https://img.shields.io/badge/Operators-CS%20%7C%20SD%20%7C%20OP%20%7C%20GT-f59f00.svg"></a>
 </p>
 
 </div>
