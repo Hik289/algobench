@@ -7,9 +7,9 @@
 Xinyuan Song &nbsp;&middot;&nbsp; Zekun Cai &nbsp;&middot;&nbsp; Liang Zhao
 
 <p>
-  <a href="https://arxiv.org/abs/2607.00062"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2607.00062-b31b1b.svg"></a>
-  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
-  <a href="requirements.txt"><img alt="Python" src="https://img.shields.io/badge/Python-3.9%2B-blue.svg"></a>
+  <a href="https://arxiv.org/abs/2607.00062"><img src="https://img.shields.io/badge/arXiv-2607.00062-b31b1b.svg" alt="arXiv"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT license"></a>
+  <a href="requirements.txt"><img src="https://img.shields.io/badge/Python-3.9%2B-3776AB.svg" alt="Python 3.9+"></a>
 </p>
 
 </div>
