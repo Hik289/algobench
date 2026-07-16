@@ -22,7 +22,13 @@ AlgoBench is the official code release for **[AlgoBench: Benchmarking Algorithmi
 
 Many established programming benchmarks eventually become part of the public training ecosystem through released statements, editorials, tests, and generated solutions. AlgoBench addresses this by automatically constructing **constraint-shifted algorithmic variants** from known competitive-programming problems. Each accepted variant is traceable to a source problem, but the original reference algorithm must fail on the shifted problem.
 
-## Highlights
+## At a Glance
+
+- **Research question.** Can code-generation models adapt algorithms to shifted problem constraints rather than memorize public benchmark solutions?
+- **Core idea.** AlgoBench constructs traceable constraint-shifted variants whose original reference algorithms fail under the new setting.
+- **What is included.** Benchmark snapshots, transformation operators, model-output evaluation, analysis scripts, and reproducibility protocols.
+
+## Key Contributions
 
 - **Generative benchmark construction.** Build new algorithmic tasks through structured transformations of known source problems.
 - **Contamination-aware evaluation.** Fresh or private shifted variants reduce dependence on exact-item memorization.
@@ -72,7 +78,7 @@ AlgoBench separates "the code ran" from "the algorithm is appropriate for the sh
 
 These metrics are useful because many solutions that look correct on examples still fail the required asymptotic behavior of the generated problem.
 
-## Repository Layout
+## Repository Structure
 
 ```text
 algobench/
