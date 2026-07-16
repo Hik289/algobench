@@ -1,18 +1,18 @@
-<div align="center">
+<h1 align="center">AlgoBench</h1>
 
-# AlgoBench
+<p align="center">
+  <strong>Benchmarking Algorithmic Adaptation in Code Generation</strong>
+</p>
 
-**Benchmarking Algorithmic Adaptation in Code Generation**
+<p align="center">
+  Xinyuan Song &nbsp;&middot;&nbsp; Zekun Cai &nbsp;&middot;&nbsp; Liang Zhao
+</p>
 
-Xinyuan Song &nbsp;&middot;&nbsp; Zekun Cai &nbsp;&middot;&nbsp; Liang Zhao
-
-<p>
+<p align="center">
   <a href="https://arxiv.org/abs/2607.00062"><img src="https://img.shields.io/badge/arXiv-2607.00062-b31b1b.svg" alt="arXiv"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT license"></a>
   <a href="requirements.txt"><img src="https://img.shields.io/badge/Python-3.9%2B-3776AB.svg" alt="Python 3.9+"></a>
 </p>
-
-</div>
 
 <p align="center">
   <img src="assets/algobench_intuition.png" alt="AlgoBench intuition: generate shifted algorithmic problems to test adaptation beyond memorized benchmark tasks." width="96%">
