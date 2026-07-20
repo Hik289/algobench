@@ -36,3 +36,19 @@ Thumbs.db
 # Cache files
 *_cache.json
 *.bak_*
+
+# Shared research-artifact hygiene
+.AppleDouble
+._*
+*~
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.env.*
+!.env.example
+outputs/
+runs/
+logs/
+wandb/
+checkpoints/
+*.tmp
