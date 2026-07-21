@@ -23,7 +23,7 @@ from pathlib import Path
 import random
 
 # ─── Paths ────────────────────────────────────────────────────────────────────
-ROOT  = Path('/path/to/.openclaw/research_topics/automatic_algorithm_design')
+ROOT  = Path('/path/to/research_workspace/automatic_algorithm_design')
 BENCH = ROOT / 'data' / 'final_benchmark.jsonl'
 CKPT  = ROOT / 'analysis' / 'sweep_constraints_checkpoint.json'
 OUT   = ROOT / 'analysis' / 'fig_consens_data.json'

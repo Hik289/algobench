@@ -10,7 +10,7 @@ from pathlib import Path
 from google import genai as gai
 from google.genai import types as gtypes
 
-ROOT  = Path('/path/to/.openclaw/research_topics/automatic_algorithm_design')
+ROOT  = Path('/path/to/research_workspace/automatic_algorithm_design')
 RFILE = ROOT / 'results/multimodel_results.json'
 BENCH = ROOT / 'data/final_benchmark.jsonl'
 

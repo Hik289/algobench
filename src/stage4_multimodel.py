@@ -402,8 +402,10 @@ def main():
 
     log(f"\nAll results saved to {out_file}")
 
-    # Signal completion
-    os.system("openclaw system event --text 'AlgoBench multimodel eval complete — call vis-expert to regenerate figures' --mode now 2>/dev/null || true")
+    # Optional local completion hook, for example: export ALGOBENCH_NOTIFY_CMD="say done"
+    notify_cmd = os.environ.get("ALGOBENCH_NOTIFY_CMD")
+    if notify_cmd:
+        os.system(notify_cmd)
 
 if __name__ == "__main__":
     main()

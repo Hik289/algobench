@@ -7,7 +7,7 @@ Fix: new is_optimal_full("O(n^2)", "O(nW)") → True (DP target)
 import json, re, time
 from pathlib import Path
 
-BASE_DIR    = Path("/path/to/.openclaw/research_topics/automatic_algorithm_design")
+BASE_DIR    = Path("/path/to/research_workspace/automatic_algorithm_design")
 RESULTS_DIR = BASE_DIR / "results"
 ANALYSIS    = BASE_DIR / "analysis"
 OUT_FILE    = RESULTS_DIR / "multimodel_results.json"

@@ -25,7 +25,7 @@ import os, sys, json, ast, re, time, subprocess, tempfile, hashlib
 from pathlib import Path
 from collections import defaultdict
 
-BASE_DIR   = Path("/path/to/.openclaw/research_topics/automatic_algorithm_design")
+BASE_DIR   = Path("/path/to/research_workspace/automatic_algorithm_design")
 BENCH_FILE = BASE_DIR / "data" / "final_benchmark.jsonl"
 SRC_FILE   = BASE_DIR / "release" / "constraintshift" / "data" / "source_problems.jsonl"
 OUT_JSON   = BASE_DIR / "analysis" / "table_ablation.json"

@@ -3,7 +3,7 @@
 import json, time
 from pathlib import Path
 
-ROOT  = Path('/path/to/.openclaw/research_topics/automatic_algorithm_design')
+ROOT  = Path('/path/to/research_workspace/automatic_algorithm_design')
 RFILE = ROOT / 'results/multimodel_results.json'
 
 ORIG11 = ['CS001','CS003','CS005','SD001','SD002','SD003','OP001','OP002','GT001','GT002','GT003']

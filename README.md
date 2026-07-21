@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  Xinyuan Song &nbsp;&middot;&nbsp; Zekun Cai &nbsp;&middot;&nbsp; Liang Zhao
+  Anonymous Authors
 </p>
 
 <p align="center">
@@ -232,7 +232,7 @@ For a reviewer-oriented map of smoke checks, paper-scale entry points, data boun
 ```bibtex
 @misc{song2026algobenchbenchmarkingalgorithmicadaptation,
   title={AlgoBench: Benchmarking Algorithmic Adaptation in Code Generation},
-  author={Xinyuan Song and Zekun Cai and Liang Zhao},
+  author={Anonymous Authors},
   year={2026},
   eprint={2607.00062},
   archivePrefix={arXiv},
