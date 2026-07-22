@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""
+r"""
 gen_figs_r5.py  –  AlgoBench / ConstraintShift paper figure generator (R5)
 Generates 5 figures from real JSON data.  ZERO hardcoded paper numbers.
 All figures saved as .pdf + .png (300 dpi) to figures/ directory.

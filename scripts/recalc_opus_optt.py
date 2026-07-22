@@ -17,7 +17,7 @@ NOTE: ANTHROPIC_API_KEY was invalid (401 error). Recalculating from stored data 
 import json, re, time
 from pathlib import Path
 
-BASE_DIR    = Path("/path/to/research_workspace/automatic_algorithm_design")
+BASE_DIR    = Path("/path/to/project_workspace/algorithm_design")
 RESULTS_DIR = BASE_DIR / "results"
 ANALYSIS    = BASE_DIR / "analysis"
 OUT_FILE    = RESULTS_DIR / "multimodel_results.json"

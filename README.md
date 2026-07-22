@@ -22,11 +22,11 @@ AlgoBench is the official code release for **[AlgoBench: Benchmarking Algorithmi
 
 Many established programming benchmarks eventually become part of the public training ecosystem through released statements, editorials, tests, and generated solutions. AlgoBench addresses this by automatically constructing **constraint-shifted algorithmic variants** from known competitive-programming problems. Each accepted variant is traceable to a source problem, but the original reference algorithm must fail on the shifted problem.
 
-## At a Glance
+## Repository Summary
 
-- **Research question.** Can code-generation models adapt algorithms to shifted problem constraints rather than memorize public benchmark solutions?
-- **Core idea.** AlgoBench constructs traceable constraint-shifted variants whose original reference algorithms fail under the new setting.
-- **What is included.** Benchmark snapshots, transformation operators, model-output evaluation, analysis scripts, and reproducibility protocols.
+- **Scope.** Can code-generation models adapt algorithms to shifted problem constraints rather than memorize public benchmark solutions?
+- **Method.** AlgoBench constructs traceable constraint-shifted variants whose original reference algorithms fail under the new setting.
+- **Contents.** Benchmark snapshots, transformation operators, model-output evaluation, analysis scripts, and reproducibility protocols.
 
 ## Key Contributions
 
@@ -216,16 +216,16 @@ For contamination-aware evaluation with AlgoBench:
 7. report pass@k and complexity-aware metrics separately;
 8. release generation metadata after evaluation when possible.
 
-## Reviewer Guide
+## Artifact Notes
 
-For a reviewer-oriented map of smoke checks, paper-scale entry points, data boundaries, and reporting metadata, see [Artifact Guide](docs/ARTIFACT.md).
+Reproduction notes are in [docs/ARTIFACT.md](docs/ARTIFACT.md): environment files, smoke checks, data boundaries, and paper-scale entry points.
 
-## Artifact Checklist
+## Reproducibility Notes
 
-- **Code release.** Core implementations, configuration files, and reproduction entry points are versioned in this repository.
-- **Reproducibility.** Start with the smoke or quick-start path before paper-scale runs; record the commit hash, Python version, backend/model identifiers, seeds, and command-line arguments.
-- **Data and credentials.** Large datasets, benchmark downloads, generated outputs, and API keys are intentionally excluded. Use the data and configuration notes above to recreate them or point to local copies.
-- **Reporting.** For paper-scale runs, keep raw run folders immutable and regenerate tables or figures from the logged artifacts with the listed analysis scripts.
+- **Release.** Source code, configuration files, and runnable entry points are tracked here.
+- **Runs.** Start with the smoke or quick-start commands before full grids; record commit hash, Python version, model/backend identifiers, seeds, and command-line arguments.
+- **Data.** Large datasets, benchmark downloads, generated outputs, and API keys are not tracked. Use the data/configuration notes above to recreate or point to local copies.
+- **Reporting.** Keep raw run folders fixed for paper-scale runs and regenerate tables or figures from logged artifacts with the listed scripts.
 
 ## Citation
 
