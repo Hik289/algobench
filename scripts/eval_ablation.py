@@ -21,13 +21,12 @@ Usage:
 Maintainer: anonymous artifact authors
 """
 
-import os, sys, json, ast, re, time, subprocess, tempfile, hashlib
+import os, sys, json, ast, re, time, subprocess, tempfile
 from pathlib import Path
-from collections import defaultdict
 
-BASE_DIR   = Path("/path/to/project_workspace/algorithm_design")
+BASE_DIR = Path(__file__).resolve().parent.parent
 BENCH_FILE = BASE_DIR / "data" / "final_benchmark.jsonl"
-SRC_FILE   = BASE_DIR / "release" / "constraintshift" / "data" / "source_problems.jsonl"
+SRC_FILE = BASE_DIR / "data" / "source_problems.jsonl"
 OUT_JSON   = BASE_DIR / "analysis" / "table_ablation.json"
 LOG_FILE   = BASE_DIR / "logs" / "eval_ablation.log"
 CACHE_FILE = BASE_DIR / "logs" / "eval_ablation_code_cache.json"

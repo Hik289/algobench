@@ -8,12 +8,10 @@ Anti-hardcoding: all values read from analysis/fig_consens_data.json.
 
 import json
 import os
-import sys
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
-import numpy as np
 
 # ── paths ──────────────────────────────────────────────────────────────────────
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))

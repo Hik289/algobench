@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compute structural shift metrics (Director utility — pure aggregation, no ML code).
+"""Compute structural shift metrics from saved benchmark and result data.
 
 Outputs:
   analysis/shift_metrics_per_problem.json   # per-problem features
@@ -277,7 +277,7 @@ print(f"  Text Jaccard:        mean={m_j:.3f}, std={s_j:.3f}, n={n_j}")
 print(f"  Length ratio:        mean={m_l:.2f}×, std={s_l:.2f}, n={n_l}")
 print(f"  Constraint mag ratio:mean={m_m:.0f}×, std={s_m:.0f}, n={n_m}")
 print(f"  Δexp (complexity):   mean={m_d:+.2f}, std={s_d:.2f}, n={n_d}")
-print(f"  Alg distance distribution:")
+print("  Alg distance distribution:")
 total_dist = sum(dist_counts.values())
 for k, v in sorted(dist_counts.items(), key=lambda x: -(x[1] or 0)):
     label = k if k is not None else 'None(no algo metadata)'

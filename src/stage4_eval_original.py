@@ -44,7 +44,6 @@ def make_direct_prompt_original(prob):
     }
 
 def extract_code(text):
-    import re
     m = re.search(r'```(?:python)?\n(.*?)```', text, re.DOTALL)
     if m: return m.group(1).strip()
     if 'def ' in text or 'import ' in text or 'for ' in text:

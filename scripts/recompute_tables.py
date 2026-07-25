@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Recompute all paper tables from results/multimodel_results.json.
-Director utility script: pure aggregation, no ML code.
+This is a pure aggregation script and does not call any model.
 
 Produces:
   analysis/table_main.json          # tab:main
@@ -12,7 +12,6 @@ Produces:
 """
 import json
 from pathlib import Path
-from collections import defaultdict
 
 ROOT = Path(__file__).resolve().parent.parent
 RES  = json.load(open(ROOT / 'results/multimodel_results.json'))

@@ -10,7 +10,7 @@ from pathlib import Path
 from google import genai as gai
 from google.genai import types as gtypes
 
-ROOT  = Path('/path/to/project_workspace/algorithm_design')
+ROOT = Path(__file__).resolve().parent.parent
 RFILE = ROOT / 'results/multimodel_results.json'
 BENCH = ROOT / 'data/final_benchmark.jsonl'
 
@@ -185,7 +185,6 @@ def has_trap(code, patterns):
 
 # ── Single (problem, mode) evaluation ──────────────────────────────────
 def eval_one(p, use_source=False):
-    pid = p['id']
     prompt = make_prompt(p, use_source)
     tc  = p.get('target_complexity', {}) if not use_source else p.get('source_complexity', {})
     tcs = tc.get('time', 'O(n log n)') if isinstance(tc, dict) else str(tc)
@@ -275,7 +274,6 @@ def main():
 
     # ── Summary ─────────────────────────────────────────────────────
     print(f"\n=== 完成 ({total_calls} API calls) ===")
-    import statistics as stats
     d = mr[KEY]
     o20_in = [p for p in O20 if p in d]
     src_p1 = [int(d[p]['original']['pass_at_1']) for p in o20_in if 'pass_at_1' in d[p].get('original', {})]
@@ -285,7 +283,7 @@ def main():
     def fmt(v): return f"{sum(v)/len(v)*100:.1f}% ({sum(v)}/{len(v)})" if v else '---'
     print(f"O20 src p@1={fmt(src_p1)} p@5={fmt(src_p5)}")
     print(f"O20 shf p@1={fmt(shf_p1)} p@5={fmt(shf_p5)}")
-    print(f"详细 summary 通过 scripts/gen_gemini_o20_summary.py 生成")
+    print("详细 summary 通过 scripts/gen_gemini_o20_summary.py 生成")
 
 if __name__ == '__main__':
     main()

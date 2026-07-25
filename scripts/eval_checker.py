@@ -3,11 +3,11 @@
 eval_checker.py v2 — Complexity Verifier Validation (Task B)
 Handles both stdin-style (input/output) and func-style (args/expected) problems.
 """
-import os, sys, json, ast, re, time, subprocess, tempfile, math, random
+import os, sys, json, ast, re, time, subprocess, tempfile, random
 from pathlib import Path
 from collections import defaultdict
 
-BASE_DIR   = Path("/path/to/project_workspace/algorithm_design")
+BASE_DIR = Path(__file__).resolve().parent.parent
 BENCH_FILE = BASE_DIR / "data" / "final_benchmark.jsonl"
 OUT_JSON   = BASE_DIR / "analysis" / "table_checker.json"
 LOG_FILE   = BASE_DIR / "logs" / "eval_checker.log"
@@ -60,7 +60,7 @@ def examples_str(prob):
             s = f"Example {i+1}: {str(e)[:200]}"
         total += len(s)
         if total > MAX_EXAMPLE_CHARS:
-            parts.append(f"(remaining examples truncated for brevity)")
+            parts.append("(remaining examples truncated for brevity)")
             break
         parts.append(s)
     return "\n\n".join(parts)
@@ -68,7 +68,6 @@ def examples_str(prob):
 def problem_io_format(prob):
     """Get I/O format description for LLM prompt."""
     if is_func_style(prob):
-        ex = prob.get("shifted_examples", [{}])[0]
         return (f"Function signature: {prob.get('shifted_input','solve(...)→...')}\n"
                 f"Return: {prob.get('shifted_output','see examples')}")
     return (f"Input format: {prob.get('shifted_input','')}\n"

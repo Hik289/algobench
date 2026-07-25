@@ -5,10 +5,12 @@ Stage 5: Compute summary statistics and prepare paper table numbers.
 
 import json, os, time
 from collections import defaultdict
+from pathlib import Path
 
-RESULTS_FILE  = "/path/to/algobench/results/main_results.json"
-SUMMARY_FILE  = "/path/to/algobench/results/summary_stats.json"
-LOG_FILE      = "/path/to/algobench/logs/stage5.log"
+BASE_DIR = Path(__file__).resolve().parent.parent
+RESULTS_FILE = str(BASE_DIR / "results" / "main_results.json")
+SUMMARY_FILE = str(BASE_DIR / "results" / "summary_stats.json")
+LOG_FILE = str(BASE_DIR / "logs" / "stage5.log")
 
 def log(msg):
     ts = time.strftime("%Y-%m-%d %H:%M:%S")

@@ -14,9 +14,9 @@ import ast, json, os, re, subprocess, sys, tempfile, time
 from pathlib import Path
 from collections import defaultdict
 
-BASE_DIR   = Path("/path/to/project_workspace/algorithm_design")
+BASE_DIR = Path(__file__).resolve().parent.parent
 BENCH_FILE = BASE_DIR / "data" / "final_benchmark.jsonl"
-SRC_FILE   = BASE_DIR / "release" / "constraintshift" / "data" / "source_problems.jsonl"
+SRC_FILE = BASE_DIR / "data" / "source_problems.jsonl"
 OUT_JSON   = BASE_DIR / "analysis" / "table_ablation.json"
 OUT_V2     = BASE_DIR / "analysis" / "table_ablation_v2.json"
 LOG_FILE   = BASE_DIR / "logs" / "eval_ablation_v2.log"
@@ -118,7 +118,7 @@ def run_code(code, examples, timeout=5):
                                text=True,timeout=timeout)
             if r.returncode != 0: return False, f"err:{r.stderr[:80]}"
             if r.stdout.strip() != ex["output"].strip():
-                return False, f"WA"
+                return False, "WA"
         return True, "ok"
     except subprocess.TimeoutExpired: return False, "TLE"
     except Exception as e: return False, str(e)

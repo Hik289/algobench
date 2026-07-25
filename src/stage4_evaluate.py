@@ -8,12 +8,12 @@ Metrics: pass@1, pass@5, OptT, TrapRate
 
 import json, os, sys, time, re, ast, subprocess, tempfile, random
 from pathlib import Path
-from collections import defaultdict
 
-BENCH_FILE   = "/path/to/algobench/data/final_benchmark.jsonl"
-RESULTS_FILE = "/path/to/algobench/results/main_results.json"
-LOG_FILE     = "/path/to/algobench/logs/stage4.log"
-PYTHON       = "/path/to/venv"
+BASE_DIR = Path(__file__).resolve().parent.parent
+BENCH_FILE = str(BASE_DIR / "data" / "final_benchmark.jsonl")
+RESULTS_FILE = str(BASE_DIR / "results" / "main_results.json")
+LOG_FILE = str(BASE_DIR / "logs" / "stage4.log")
+PYTHON = sys.executable
 
 # GPT-4o mini API settings
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
@@ -286,7 +286,7 @@ def evaluate_problem(prob, all_problems, model_name, strategy):
     # Call model
     if "gpt" in model_name:
         if not OPENAI_API_KEY:
-            log(f"    SKIP: no OPENAI_API_KEY set")
+            log("    SKIP: no OPENAI_API_KEY set")
             return None
         responses, err = call_gpt4o_mini(prompt, n=N_SAMPLES)
     else:

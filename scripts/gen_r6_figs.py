@@ -55,7 +55,8 @@ def fig_contamination():
     x = np.arange(len(tiers))
     w = 0.36
 
-    bars_src = ax.bar(x - w/2, src, w, color=BLUE,   alpha=0.92, label='Source',  edgecolor='white', linewidth=0.4)
+    ax.bar(x - w/2, src, w, color=BLUE, alpha=0.92, label='Source',
+           edgecolor='white', linewidth=0.4)
     bars_shf = ax.bar(x + w/2, shf, w, color=ORANGE, alpha=0.92, label='Shifted', edgecolor='white', linewidth=0.4)
 
     # Δ annotation above Shf bar

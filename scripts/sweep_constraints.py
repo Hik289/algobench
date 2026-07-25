@@ -23,7 +23,7 @@ from pathlib import Path
 import random
 
 # ─── Paths ────────────────────────────────────────────────────────────────────
-ROOT  = Path('/path/to/project_workspace/algorithm_design')
+ROOT = Path(__file__).resolve().parent.parent
 BENCH = ROOT / 'data' / 'final_benchmark.jsonl'
 CKPT  = ROOT / 'analysis' / 'sweep_constraints_checkpoint.json'
 OUT   = ROOT / 'analysis' / 'fig_consens_data.json'
@@ -406,7 +406,7 @@ def call_gemini(model_id: str, prompt: dict, retries: int = 2) -> list[str]:
             except Exception as e:
                 err_str = str(e)
                 if 'API key expired' in err_str or 'API_KEY_INVALID' in err_str:
-                    log(f'  Gemini key EXPIRED — disabling Gemini for this run')
+                    log('  Gemini key EXPIRED — disabling Gemini for this run')
                     _gemini_key_status['ok'] = False
                     results.extend([''] * (N_SAMPLES - len(results)))
                     return results

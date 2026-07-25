@@ -3,7 +3,7 @@
 import json, time
 from pathlib import Path
 
-ROOT  = Path('/path/to/project_workspace/algorithm_design')
+ROOT = Path(__file__).resolve().parent.parent
 RFILE = ROOT / 'results/multimodel_results.json'
 
 ORIG11 = ['CS001','CS003','CS005','SD001','SD002','SD003','OP001','OP002','GT001','GT002','GT003']
@@ -29,12 +29,12 @@ def mean(v): return f"{sum(v)/len(v)*100:.1f}%" if v else "---"
 
 out_path = ROOT / 'analysis/gemini_o20_summary.txt'
 with open(out_path, 'w') as fh:
-    fh.write(f"# Gemini-2.5-flash direct on O20 — N=5 samples\n")
+    fh.write("# Gemini-2.5-flash direct on O20 — N=5 samples\n")
     fh.write(f"运行时刻 JST: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())}\n")
-    fh.write(f"\n## 总体 (20 题)\n")
+    fh.write("\n## 总体 (20 题)\n")
     fh.write(f"  shifted : p@1={fmt(shf_p1)}  p@5={fmt(shf_p5)}  OptT={mean(shf_ot)}  OptS={mean(shf_os)}  TrapRate={mean(shf_tr)}\n")
     fh.write(f"  original: p@1={fmt(src_p1)}  p@5={fmt(src_p5)}  OptT={mean(src_ot)}\n")
-    fh.write(f"\n## ORIG11 (11 题)\n")
+    fh.write("\n## ORIG11 (11 题)\n")
     fh.write(f"{'PID':<8} | {'shf p@1':<8} {'p@5':<5} {'OptT':<5} {'OptS':<5} {'Trap':<5} | {'src p@1':<8} {'p@5':<5} {'OptT':<5}\n")
     fh.write("-"*88 + "\n")
     for pid in ORIG11:
@@ -48,7 +48,7 @@ with open(out_path, 'w') as fh:
                  f"{'✓' if src.get('pass_at_1') else '✗':<8} "
                  f"{'✓' if src.get('pass_at_5') else '✗':<5} "
                  f"{src.get('opt_t',0)*100:>4.0f}%\n")
-    fh.write(f"\n## HARD9 (9 题)\n")
+    fh.write("\n## HARD9 (9 题)\n")
     fh.write(f"{'PID':<8} | {'shf p@1':<8} {'p@5':<5} {'OptT':<5} {'OptS':<5} {'Trap':<5} | {'src p@1':<8} {'p@5':<5} {'OptT':<5}\n")
     fh.write("-"*88 + "\n")
     for pid in HARD9:
@@ -63,7 +63,7 @@ with open(out_path, 'w') as fh:
                  f"{'✓' if src.get('pass_at_5') else '✗':<5} "
                  f"{src.get('opt_t',0)*100:>4.0f}%\n")
 
-    fh.write(f"\n## Schema 检查\n")
+    fh.write("\n## Schema 检查\n")
     fh.write(f"  Gemini direct 总题数: {len(d)} (27 → {len(d)})\n")
     complete = sum(1 for pid in O20 if pid in d and 'sample_results' in d[pid].get('shifted',{}) and 'sample_results' in d[pid].get('original',{}))
     fh.write(f"  O20 完整 schema (含 sample_results): {complete}/20\n")

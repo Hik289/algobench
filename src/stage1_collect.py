@@ -45,15 +45,15 @@ Output schema (every source must produce this format):
 import argparse
 import json
 import os
-import sys
 import time
-import re
 import hashlib
+from pathlib import Path
 from abc import ABC, abstractmethod
 from typing import List, Dict, Optional
 
-OUTPUT_FILE = "/path/to/algobench/data/source_problems.jsonl"
-LOG_FILE    = "/path/to/algobench/logs/stage1.log"
+BASE_DIR = Path(__file__).resolve().parent.parent
+OUTPUT_FILE = str(BASE_DIR / "data" / "source_problems.jsonl")
+LOG_FILE = str(BASE_DIR / "logs" / "stage1.log")
 
 # ── Logging ──────────────────────────────────────────────────────────────────
 
@@ -158,7 +158,6 @@ class CodeContestsSource(DataSource):
 
             # Extract reference solution (prefer Python)
             ref_algo = "unknown"
-            py_solutions = item.get("solutions", {}).get("language", [])
             # CodeContests solution languages: 0=C++, 3=Python3
             sol_langs = item.get("solutions", {}).get("language", [])
             sol_codes = item.get("solutions", {}).get("solution", [])

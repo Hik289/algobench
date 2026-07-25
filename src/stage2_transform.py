@@ -5,13 +5,15 @@ Since transformations are already defined in seed problems (shifted_* fields),
 this stage: (1) validates Gate 1 (old solution fails), (2) formats for evaluation.
 """
 
-import json, os, time, ast, subprocess, tempfile, sys
+import json, os, time, subprocess, tempfile, sys
+from pathlib import Path
 
-SEEDS_FILE  = "/path/to/algobench/data/source_problems.jsonl"
-OUTPUT_FILE = "/path/to/algobench/data/final_benchmark.jsonl"
-LOG_FILE    = "/path/to/algobench/logs/stage2.log"
+BASE_DIR = Path(__file__).resolve().parent.parent
+SEEDS_FILE = str(BASE_DIR / "data" / "source_problems.jsonl")
+OUTPUT_FILE = str(BASE_DIR / "data" / "final_benchmark.jsonl")
+LOG_FILE = str(BASE_DIR / "logs" / "stage2.log")
 
-PYTHON      = "/path/to/venv"
+PYTHON = sys.executable
 
 def log(msg):
     ts = time.strftime("%Y-%m-%d %H:%M:%S")

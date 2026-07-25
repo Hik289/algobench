@@ -170,7 +170,6 @@ def fig2_rag_severity():
 
     models  = list(raw.keys())
     n_mod   = len(models)
-    n_bars  = 4            # easy-Direct / easy-RAG / hard-Direct / hard-RAG
     x       = np.arange(n_mod)
     w       = 0.18
     offsets = np.array([-1.5, -0.5, 0.5, 1.5]) * w

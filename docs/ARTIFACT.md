@@ -9,7 +9,7 @@ Operational notes for reproducing `AlgoBench` from the public `algobench` reposi
 - `data/`: Small fixtures, schemas, manifests, or data-layout notes; large data should stay outside git.
 - `assets/`: README and paper-facing visual assets.
 - `analysis/`: Post-processing, table, and figure-generation scripts.
-- `results/`: Small checked-in placeholders or result documentation; generated result folders remain local.
+- `results/`: Checked-in evaluation records; newly generated result files remain local unless explicitly added.
 
 ## Environment Files
 

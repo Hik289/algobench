@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""Director Level-1 utility analysis for all missing-data subsections.
-Pure data aggregation from benchmark JSON + results JSON. No ML code.
+"""Aggregate the benchmark and evaluation data used by the paper analyses.
+
+This script performs no model calls.
 
 Outputs 6 JSONs in analysis/:
   - algo_taxonomy.json           (algorithm family classification, target coverage ≥80%)
@@ -317,7 +318,7 @@ for (fs, ft), v in transition.items():
     fig_transition_data.append({
         'src_family': fs,
         'tgt_family': ft,
-        'distance': algo_distance_via_families(fs, ft) if False else (
+        'distance': (
             'Same' if fs == ft else
             ('Near' if {fs, ft} in NEAR_FAMILIES else 'Far')
         ),

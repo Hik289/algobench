@@ -404,7 +404,6 @@ def main():
         key = f"{model}__direct"
         probs_data = all_results.get(key, {})
         t20_data   = {k: v for k, v in probs_data.items() if k in TARGET_20}
-        n = len(t20_data)
 
         # Shifted stats
         shf_evs = [v.get("shifted", {}) for v in t20_data.values()]

@@ -16,7 +16,6 @@ Usage:
 """
 import argparse, ast, json, os, re, subprocess, sys, tempfile, time
 from pathlib import Path
-from collections import defaultdict
 
 BASE_DIR     = Path(__file__).resolve().parent.parent
 BENCH_FILE   = str(BASE_DIR / "data"    / "final_benchmark.jsonl")
