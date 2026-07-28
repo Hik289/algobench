@@ -22,11 +22,15 @@ AlgoBench is the official code release for **[AlgoBench: Benchmarking Algorithmi
 
 Many established programming benchmarks eventually become part of the public training ecosystem through released statements, editorials, tests, and generated solutions. AlgoBench addresses this by automatically constructing **constraint-shifted algorithmic variants** from known competitive-programming problems. Each accepted variant is traceable to a source problem, but the original reference algorithm must fail on the shifted problem.
 
-## Repository Summary
+## At A Glance
 
-- **Scope.** Can code-generation models adapt algorithms to shifted problem constraints rather than memorize public benchmark solutions?
-- **Method.** AlgoBench constructs traceable constraint-shifted variants whose original reference algorithms fail under the new setting.
-- **Contents.** Benchmark snapshots, transformation operators, model-output evaluation, analysis scripts, and reproducibility protocols.
+| Artifact review question | Entry point |
+| --- | --- |
+| Research question | Can code-generation models adapt algorithms to shifted problem constraints rather than memorize public benchmark solutions? |
+| Core method | AlgoBench constructs traceable constraint-shifted variants whose original reference algorithms fail under the new setting. |
+| Included artifacts | Benchmark snapshots, transformation operators, model-output evaluation, analysis scripts, and reproducibility protocols. |
+| Fast validation | `bash run_pipeline.sh` for the local construction/evaluation path. |
+| Paper-scale reproduction | `python src/stage4_multimodel.py`, `python src/stage5_analyze.py`, and table recomputation scripts. |
 
 ## Key Contributions
 
