@@ -283,11 +283,6 @@ def fig3_gapt_breakdown():
     save(fig, "fig_gapt_breakdown")
 
 
-# ══════════════════════════════════════════════════════════════════════════════
-# FIGURE 4 – fig_gen_gap  (regenerated from table_main.json + table_gen_gap_dist.json)
-# Top panel: Src vs Shf pass@1 per model
-# Bottom panel: Δp@1 by alg-distance category (Same / Near / Far)
-# ══════════════════════════════════════════════════════════════════════════════
 def fig4_gen_gap():
     print("[fig4] gen gap …")
     main_rows  = json.load(open(os.path.join(ANALYSIS, "table_main.json")))

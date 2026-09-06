@@ -267,11 +267,6 @@ table_shift['distance_coverage_rate'] = coverage
 with open(OUT / 'table_shift.json', 'w') as f:
     json.dump(table_shift, f, indent=2)
 
-# =============================================================
-# (3) tab:gen_gap_dist — Gen gap by algorithm distance, per-model
-# =============================================================
-# For each model, for each distance class (Same / Near / Far), compute
-# mean source pass@1 - mean shifted pass@1.
 table_gen_gap_dist = {}
 for m in MODELS:
     key = f'{m}__direct'
@@ -383,11 +378,6 @@ fig_rag_severity['_meta'] = {
 with open(OUT / 'fig_rag_severity_data.json', 'w') as f:
     json.dump(fig_rag_severity, f, indent=2)
 
-# =============================================================
-# (6) fig:gapt — effective exponent gap by operator
-# =============================================================
-# For each correct sample, parse est_t (symbolic) into exponent, compare to target.
-# Output: per-operator mean (exp_effective - exp_target) — limited by symbolic accuracy.
 
 # Reuse complexity_to_exp from compute_shift_metrics
 def parse_exp(s):
