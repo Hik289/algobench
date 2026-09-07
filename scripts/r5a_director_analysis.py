@@ -31,10 +31,6 @@ HARD9  = ['CS_H1','CS_H2','SD_H1','OP_H1','GT_H1','GT_H2','SD_H2','OP_H2','CS_H3
 O20    = ORIG11 + HARD9
 MODELS = ['gpt-4o-mini','gpt-4o','claude-haiku-4-5','gemini-2.5-flash','gpt-5.4','claude-opus-4-5']
 
-# =============================================================
-# (1) Algorithm Taxonomy (full coverage, including C27 inference)
-# =============================================================
-# Hand-curated families. Algos not listed default to 'misc'.
 ALGO_TO_FAMILY = {
     # static range / prefix sums
     'prefix_sum': 'static_range',
@@ -293,10 +289,6 @@ for m in MODELS:
 with open(OUT / 'table_gen_gap_dist.json', 'w') as f:
     json.dump(table_gen_gap_dist, f, indent=2)
 
-# =============================================================
-# (4) fig:transition — algo-pair pass@1 / opt_t heatmap
-# =============================================================
-# Aggregate per (src_family, tgt_family) cell.
 transition = defaultdict(lambda: {'pids': [], 'p1_vals': [], 'opt_t_vals': []})
 for pid, info in per_problem.items():
     fs, ft = info['src_family'], info['tgt_family']
@@ -327,10 +319,6 @@ fig_transition_data.sort(key=lambda x: (x['distance'] != 'Same', x['distance'] !
 with open(OUT / 'fig_transition_data.json', 'w') as f:
     json.dump(fig_transition_data, f, indent=2)
 
-# =============================================================
-# (5) fig:rag_severity — RAG split by Jaccard severity
-# =============================================================
-# Load existing shift_metrics_per_problem.json for Jaccard
 per_prob_metrics = json.load(open(OUT / 'shift_metrics_per_problem.json'))
 # Use the 17 problems with CoT/RAG data: ORIG11 + 6 hard variants
 # Get problems present in cot/rag keys

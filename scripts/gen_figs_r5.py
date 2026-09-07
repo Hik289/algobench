@@ -66,10 +66,6 @@ def save(fig, stem):
     plt.close(fig)
 
 
-# ══════════════════════════════════════════════════════════════════════════════
-# FIGURE 1 – fig_transition_heatmap
-# Scatter plot of algo-pair transitions, sized by n_problems, coloured by distance
-# ══════════════════════════════════════════════════════════════════════════════
 def fig1_transition_heatmap():
     print("[fig1] transition heatmap …")
     cells = json.load(open(os.path.join(ANALYSIS, "fig_transition_data.json")))
@@ -159,10 +155,6 @@ def fig1_transition_heatmap():
     save(fig, "fig_transition_heatmap")
 
 
-# ══════════════════════════════════════════════════════════════════════════════
-# FIGURE 2 – fig_rag_severity
-# Two-panel grouped bar: pass@1 and trap_rate, by model × (easy/hard × direct/RAG)
-# ══════════════════════════════════════════════════════════════════════════════
 def fig2_rag_severity():
     print("[fig2] RAG severity …")
     raw  = json.load(open(os.path.join(ANALYSIS, "fig_rag_severity_data.json")))
@@ -219,10 +211,6 @@ def fig2_rag_severity():
     save(fig, "fig_rag_severity")
 
 
-# ══════════════════════════════════════════════════════════════════════════════
-# FIGURE 3 – fig_gapt_breakdown
-# Dual-metric bar per operator: mean Δexp (left y) + % optimal (right y)
-# ══════════════════════════════════════════════════════════════════════════════
 def fig3_gapt_breakdown():
     print("[fig3] GAPT breakdown …")
     raw = json.load(open(os.path.join(ANALYSIS, "fig_gapt_data.json")))
@@ -351,10 +339,6 @@ def fig4_gen_gap():
     save(fig, "fig_gen_gap")
 
 
-# ══════════════════════════════════════════════════════════════════════════════
-# FIGURE 5 – fig_ablation_gates  (NEW)
-# 5 configs × 4 metrics grouped bar, diagonal pattern obvious
-# ══════════════════════════════════════════════════════════════════════════════
 def fig5_ablation_gates():
     print("[fig5] ablation gates …")
     ablation = json.load(open(os.path.join(ANALYSIS, "table_ablation.json")))
